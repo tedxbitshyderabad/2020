@@ -1,3 +1,5 @@
+// const fs = require('fs');
+
 // SPEAKER VARIABLES
 var speaker_cards = document.getElementById("speakers");
 speaker_cards = speaker_cards.children[1];
@@ -6,9 +8,24 @@ var speakers = [];
 for(var i = 0; i < speaker_cards.childElementCount; i++){
     var card = speaker_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     speakers.push(card.id);
 }
+
+function Speaker(name, occupation, talk, write_up, fb, insta, lin, tw, picture){
+    this.name = name
+    this.occupation = occupation
+    this.talk = talk
+    this.write_up = write_up
+    this.fb = fb
+    this.insta = insta
+    this.lin = lin
+    this.tw = tw
+    this.picture = picture
+}
+
+var speakers_data = [];
+
 
 // EXECUTIVE VARIABLES
 var exec_cards = document.getElementById("executives");
@@ -18,9 +35,21 @@ var executives = [];
 for(var i = 0; i < exec_cards.childElementCount; i++){
     var card = exec_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     executives.push(card.id);
 }
+
+function Executive(name, post, write_up, fb, insta, lin, picture){
+    this.name = name
+    this.post = post
+    this.write_up = write_up
+    this.fb = fb
+    this.insta = insta
+    this.lin = lin
+    this.picture = picture
+}
+
+var executives_data = [];
 
 // SPONSORS VARIABLES
 var spons_cards = document.getElementById("sponsors");
@@ -30,10 +59,51 @@ var sponsors = [];
 for(var i = 0; i < spons_cards.childElementCount; i++){
     var card = spons_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     sponsors.push(card.id);
 }
 
+
+// $.getJSON('speakers_data.json', function(data){
+//     $.each(data.speaker, function(i, speaker){
+//         speakers_data.push(Speaker(speaker.name, speaker.occupation, speaker.talk, speaker.write_up, speaker.facebook, speaker.insta, speaker.linkedin, speaker.twitter, speaker.picture_loc));
+//     });
+// });
+
+// fetch("speakers_data.json")
+// .then(res => res.json())
+// .then(data => function(){
+//     for(let i in data){
+//         speakers_data.push(Speaker(data.name, data.occupation, data.talk, data.write_up, data.facebook, data.insta, data.linkedin, data.twitter, data.picture_loc));
+//     }
+// })
+
+function loadJSON(filename, callback){
+    var speakers_file = new XMLHttpRequest();
+    speakers_file.overrideMimeType("application/json");
+    speakers_file.open("GET", filename, true);
+    console.log("Opening File");
+    speakers_file.onreadystatechange = function() {
+        console.log("File is ready");
+        if(speakers_file.readyState == 4 && (speakers_file.status == 200 || speakers_file.status == 0)){
+            console.log("Sending Callback");
+            callback(speakers_file.responseText);
+        }
+    }
+    speakers_file.send(null);
+    console.log("Done");
+}
+
+window.onload = function() {
+    loadJSON("./json/speakers_data.json", function(response){
+        var data = JSON.parse(response);
+        console.log(data);
+        for(let speaker in data){
+            // console.log(data[1]);
+            this.speakers_data.push(Speaker(speaker.name, speaker.occupation, speaker.talk, speaker.write_up, speaker.facebook, speaker.insta, speaker.linkedin, speaker.twitter, speaker.picture_loc));
+        }
+    });
+}
 
 function shiftScaleUp(j, section_name){
     j = j-1;

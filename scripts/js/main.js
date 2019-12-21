@@ -6,7 +6,7 @@ var speakers = [];
 for(var i = 0; i < speaker_cards.childElementCount; i++){
     var card = speaker_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     speakers.push(card.id);
 }
 
@@ -18,7 +18,7 @@ var executives = [];
 for(var i = 0; i < exec_cards.childElementCount; i++){
     var card = exec_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     executives.push(card.id);
 }
 
@@ -30,7 +30,7 @@ var sponsors = [];
 for(var i = 0; i < spons_cards.childElementCount; i++){
     var card = spons_cards.children[i];
 
-    console.log(card.id);
+    // console.log(card.id);
     sponsors.push(card.id);
 }
 
@@ -183,7 +183,7 @@ function generate(e){
      
     infor.style.display="block";
     removeShow();
-   var grabItem = document.querySelector(`#${this.id}-content`);
+    var grabItem = document.querySelector(`#${this.id}-content`);
     grabItem.classList.add('show');
 
 }
