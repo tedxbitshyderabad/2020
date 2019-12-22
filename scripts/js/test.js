@@ -63,21 +63,7 @@ for(var i = 0; i < spons_cards.childElementCount; i++){
     sponsors.push(card.id);
 }
 
-
-// $.getJSON('speakers_data.json', function(data){
-//     $.each(data.speaker, function(i, speaker){
-//         speakers_data.push(Speaker(speaker.name, speaker.occupation, speaker.talk, speaker.write_up, speaker.facebook, speaker.insta, speaker.linkedin, speaker.twitter, speaker.picture_loc));
-//     });
-// });
-
-// fetch("speakers_data.json")
-// .then(res => res.json())
-// .then(data => function(){
-//     for(let i in data){
-//         speakers_data.push(Speaker(data.name, data.occupation, data.talk, data.write_up, data.facebook, data.insta, data.linkedin, data.twitter, data.picture_loc));
-//     }
-// })
-
+// Loading all the data from the JSON file
 function loadJSON(filename, callback){
     var speakers_file = new XMLHttpRequest();
     speakers_file.overrideMimeType("application/json");
@@ -97,10 +83,24 @@ function loadJSON(filename, callback){
 window.onload = function() {
     loadJSON("./json/speakers_data.json", function(response){
         var data = JSON.parse(response);
-        console.log(data);
-        for(let speaker in data){
+        data = data["speaker"];
+        // speakers_data = JSON.parse(response);
+        // console.log(data);
+        for(var i in data){
             // console.log(data[1]);
-            this.speakers_data.push(Speaker(speaker.name, speaker.occupation, speaker.talk, speaker.write_up, speaker.facebook, speaker.insta, speaker.linkedin, speaker.twitter, speaker.picture_loc));
+            console.log(data[i].name);
+            speakers_data.push(new Speaker(data[i].name, data[i].occupation, data[i].talk, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
+        }
+    });
+    loadJSON("./json/executives_data.json", function(response){
+        var data = JSON.parse(response);
+        data = data["executive"];
+        // speakers_data = JSON.parse(response);
+        // console.log(data);
+        for(var i in data){
+            // console.log(data[1]);
+            console.log(data[i].name);
+            executives_data.push(new Executive(data[i].name, data[i].lead, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
         }
     });
 }
@@ -136,7 +136,8 @@ function shiftScaleUp(j, section_name){
                 card = exec_cards.children[i];
                 card.classList.add('shiftCardRight90');
             }
-        } else if(j==(exec_cards_len-1)){for(var i=0;i<(exec_cards_len - 1);i++){
+        } else if(j==(exec_cards_len-1)){
+            for(var i=0;i<(exec_cards_len - 1);i++){
                 card = exec_cards.children[i];
                 card.classList.add('shiftCardLeft90');
             }
@@ -243,24 +244,6 @@ function shiftScaleDown(j, section_name){
         }
     }
 }
-var arrow = document.querySelectorAll('.card-arrow');
-var infor = document.getElementById('speakers-info');
-var info = document.querySelectorAll('.info');
-arrow.forEach(items => {
-    items.addEventListener('click',generate);
-});
-function generate(e){
-     
-    infor.style.display="block";
-    removeShow();
-   var grabItem = document.querySelector(`#${this.id}-content`);
-    grabItem.classList.add('show');
 
-}
 
-function removeShow() {
-
-    info.forEach(items =>{
-     items.classList.remove('show');
- });
-}
+// Write function to change values of speaker-info class div based on button click.
