@@ -121,7 +121,7 @@ body::-webkit-scrollbar {
 }
 .heading{
     width: 90%;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
 }
 .heading-text{
     width: 100%;
@@ -197,19 +197,20 @@ body::-webkit-scrollbar {
 .card-details{
     position: absolute;
     top: 0;
-    /* right: 0; */
-    /* bottom: 0; */
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     color: white;
-    background: linear-gradient(
+    margin: 0 auto;
+    /* background: linear-gradient(
         to bottom, 
         rgba(0,0,0,0) 0%, 
-        rgba(0,0,0,1) 100%);
+        rgba(0,0,0,1) 100%); */
+    background-image: url("../../media/expanded_view.png");
+    background-size: cover;
+    background-repeat: round;
     opacity: 0;
     transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: opacity 1s;
@@ -282,12 +283,15 @@ body::-webkit-scrollbar {
     transform: translate3d(-90px, 0 ,0);
     opacity: 0.2;
 }
-.speaker-info{
+.people-info{
     width: 100%;
-    height: 60vh;
-    display: flex;
+    height: 65vh;
+    display: none;
     flex-direction: row;
-    
+    background-image: url("../../media/expanded_info_view.png");
+    background-repeat: round;
+    background-size: cover;
+    margin: 0 auto;
 }
 /* .info{
     width: 60%;
@@ -339,35 +343,45 @@ body::-webkit-scrollbar {
     height: 100%;
     margin: auto;
     color: white;
-    margin: 0 0 0 5%;
-    background: linear-gradient(
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    background-image: url("../../media/expanded_info_view_two.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin: 0 0 0 5%; */
+    /* background: linear-gradient(
         to right, 
         rgba(145, 6, 6,0.4) 0%,
         rgba(145, 6, 6,0.2) 40%,
         rgba(0, 0, 0, 0.1) 60%,
-        rgba(0, 0, 0, 0) 100%);
+        rgba(0, 0, 0, 0) 100%); */
 }
-.speaker-name{
+.people-name{
     width: 80%;
-    margin: 50px auto 10px auto;
-    font-size: 35px;
+    margin: 90px auto 0 auto;
+    font-size: 60px;
+    font-weight: bold; /* Helvetica Bold 12pt */
+    
 }
-.speaker-occ{
+.people-occ{
     width: 80%;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
     font-size: 30px;
+    font-weight: bold; /* Helvetica Bold 6pt */
 }
-.speaker-talk-name{
+.people-talk-name{
     width: 80%;
     margin: 10px auto;
-    font-size: 25px;
+    font-size: 40px;
+    font-weight: normal; /* Helvetica Regular  8pt (all caps) */
 }
 .write-up{
     width: 80%;
-    margin: 30px auto;
-    font-size: 18px;
+    margin: 20px auto;
+    font-size: 15px;
+    font-weight: normal; /* Helvetica Regular 5pt */
 }
-.speaker-social-handles{
+.people-social-handles{
     width: 40%;
     margin: 3% auto;
     font-size: 15px;
@@ -375,14 +389,14 @@ body::-webkit-scrollbar {
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.speaker-social-handles > li{
+.people-social-handles > li{
     list-style: none;
     margin: auto;
 }
 .pic{
     width: 40%;
     height: 100%;
-    margin: 0 5% 0 0;
+    /* margin: 0 5% 0 0; */
     position: relative;
 }
 .pic > img {
@@ -392,14 +406,43 @@ body::-webkit-scrollbar {
     right: 0;
 }
 .pic > .overlay{
-    width: 100%;
+    width: 110%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right, 
         rgba(0,0,0,1) 0%,
         rgba(0,0,0,0.8) 10%,
-        rgba(0,0,0,0) 100%);
+        rgba(0,0,0,0) 100%); */
+    /* display: none; */
+    background: radial-gradient(
+        circle at 100%, 
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 90%
+    );
+    left: -10%;
+}
+.pic > .close-button{
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.pic > .close-button > .line{
+    background-color: rgba(0,0,0,0.9);
+    height: 10%;
+    width: 60%;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+.pic > .close-button > #top{
+    transform: rotate(45deg);
+}
+.pic > .close-button > #bottom{
+    transform: rotate(-45deg);
 }
 
 

@@ -1,4 +1,5 @@
-// const fs = require('fs');
+var speaker_info = document.getElementById("speakers-info");
+var executive_info = document.getElementById("executives-info");
 
 // SPEAKER VARIABLES
 var speaker_cards = document.getElementById("speakers");
@@ -88,8 +89,8 @@ window.onload = function() {
         // console.log(data);
         for(var i in data){
             // console.log(data[1]);
-            console.log(data[i].name);
-            speakers_data.push(new Speaker(data[i].name, data[i].occupation, data[i].talk, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
+            // console.log(data[i].name);
+            speakers_data.push(new Speaker(data[i].name, data[i].occupation, data[i].talk_name, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
         }
     });
     loadJSON("./json/executives_data.json", function(response){
@@ -99,11 +100,15 @@ window.onload = function() {
         // console.log(data);
         for(var i in data){
             // console.log(data[1]);
-            console.log(data[i].name);
+            // console.log(data[i].name);
             executives_data.push(new Executive(data[i].name, data[i].lead, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
         }
     });
 }
+
+window.addEventListener("card-arrow", function(e){
+    console.log("Hello");
+});
 
 function shiftScaleUp(j, section_name){
     j = j-1;
@@ -247,3 +252,48 @@ function shiftScaleDown(j, section_name){
 
 
 // Write function to change values of speaker-info class div based on button click.
+function generate(j, type){
+
+    j = j-1;
+
+    if(type == "speakers"){
+        var speaker = speakers_data[j];
+        var text = speaker_info.children[0].children;
+        var image = speaker_info.children[1].children;
+
+        text[0].innerHTML = speaker["name"];
+        console.log(speaker["name"]);
+        text[1].innerHTML = speaker["occupation"];
+        console.log(speaker["occupation"]);
+        text[2].innerText = speaker["talk"];
+        console.log(speaker["talk"]);
+        text[3].innerText = speaker["write_up"];
+        console.log(speaker["write_up"]);
+
+        image[0].srcset = speaker["picture"];
+
+        speaker_info.style.display = "flex";
+    } else if(type == "executives"){
+        var executive = executives_data[j];
+        var text = executive_info.children[0].children;
+        var image = executive_info.children[1].children;
+
+        text[0].innerHTML = executive["name"];
+        console.log(executive["name"]);
+        text[1].innerHTML = executive["occupation"];
+        console.log(executive["occupation"]);
+        text[2].innerText = executive["write_up"];
+        console.log(executive["write_up"]);
+
+        image[0].srcset = executive["picture"];
+
+        executive.style.display = "flex";
+    }
+}
+
+$("#speakers-info").click(e => {
+    speaker_info.style.display = "none";
+});
+$("#executives-info").click(e => {
+    executive_info.style.display = "none";
+});
