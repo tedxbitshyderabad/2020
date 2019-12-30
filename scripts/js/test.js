@@ -3,7 +3,7 @@ var executive_info = document.getElementById("executives-info");
 
 // SPEAKER VARIABLES
 var speaker_cards = document.getElementById("speakers");
-speaker_cards = speaker_cards.children[1];
+speaker_cards = speaker_cards.children[1].children[1];
 var speaker_cards_len = speaker_cards.childElementCount;
 var speakers = [];
 for(var i = 0; i < speaker_cards.childElementCount; i++){
@@ -30,7 +30,7 @@ var speakers_data = [];
 
 // EXECUTIVE VARIABLES
 var exec_cards = document.getElementById("executives");
-exec_cards = exec_cards.children[1];
+exec_cards = exec_cards.children[1].children[1];
 var exec_cards_len = exec_cards.childElementCount;
 var executives = [];
 for(var i = 0; i < exec_cards.childElementCount; i++){
@@ -54,7 +54,7 @@ var executives_data = [];
 
 // SPONSORS VARIABLES
 var spons_cards = document.getElementById("sponsors");
-spons_cards = spons_cards.children[1];
+spons_cards = spons_cards.children[1].children[1];
 var spons_cards_len = spons_cards.childElementCount;
 var sponsors = [];
 for(var i = 0; i < spons_cards.childElementCount; i++){
@@ -280,14 +280,14 @@ function generate(j, type){
 
         text[0].innerHTML = executive["name"];
         console.log(executive["name"]);
-        text[1].innerHTML = executive["occupation"];
-        console.log(executive["occupation"]);
+        text[1].innerHTML = executive["lead"];
+        console.log(executive["lead"]);
         text[2].innerText = executive["write_up"];
         console.log(executive["write_up"]);
 
         image[0].srcset = executive["picture"];
 
-        executive.style.display = "flex";
+        executive_info.style.display = "flex";
     }
 }
 

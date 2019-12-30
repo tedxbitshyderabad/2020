@@ -130,10 +130,80 @@ body::-webkit-scrollbar {
     font-size: 2em;
     margin: 10px 30px;
 }
+.real-content{
+    display: flex;
+    flex-direction: row;
+    /* position: relative; */
+}
+.left-arrow{
+    width: 5%;
+    height: 250px;
+    /* position: absolute;
+    left: 0; */
+    /* background-color: red; */
+}
+.left-button{
+    width: 100%;
+    height: 170px;
+    margin: 40px auto;
+    opacity: 0;
+    transition: opacity 0.7s;
+    position: relative;
+}
+.left-button:hover{
+    opacity: 1;
+}
+.left-button > .line{
+    background-color: rgba(255,255,255,0.9);
+    height: 2%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 40%;
+}
+.left-button > #left-top{
+    transform: rotate(-45deg) translate(50%, 10%);
+}
+.left-button > #left-bottom{
+    transform: rotate(45deg) translate(50%, -10%);
+}
+.right-arrow{
+    width: 5%;
+    height: 250px;
+    /* position: absolute;
+    float: right; */
+    /* background-color: red; */
+}
+.right-button{
+    width: 100%;
+    height: 170px;
+    margin: 40px auto;
+    opacity: 0;
+    transition: opacity 0.7s;
+    /* background-color: white; */
+    position: relative;
+}
+.right-button:hover{
+    opacity: 1;
+}
+.right-button > .line{
+    background-color: rgba(255,255,255,0.9);
+    height: 2%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+.right-button > #right-top{
+    transform: rotate(45deg) translate(-45%, 0%);
+}
+.right-button > #right-bottom{
+    transform: rotate(-45deg) translate(-45%, 50%);
+}
 .cards{
     width: 90%;
     height: 250px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* display: flex; */
     /* flex-direction: row; */
     /* flex-wrap: nowrap; */
@@ -287,11 +357,13 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 65vh;
     display: none;
+    /* display: flex; */
     flex-direction: row;
     background-image: url("../../media/expanded_info_view.png");
     background-repeat: round;
     background-size: cover;
     margin: 0 auto;
+    transition: display 1s ease 0s;
 }
 /* .info{
     width: 60%;
@@ -448,7 +520,7 @@ body::-webkit-scrollbar {
 
 
 
-
+/* 
 .content .pics img{
     width: 320px;
     height: 256px;
@@ -457,11 +529,11 @@ body::-webkit-scrollbar {
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     transition: all 0.5s;
 }
-/* img:hover,img:focus {       
+img:hover,img:focus {       
     transform: translateY(-0.3em);
     transform: scale(1.5);
     box-shadow: 0em 0.5em 0.5em -0.5em rgba(255, 255, 255, 1);
-} */
+}
 .container .pic1 .navbar li{
     
     cursor: pointer;
@@ -492,4 +564,4 @@ li:hover{
     background-position: center;
     position: relative;
 
-}
+} */
