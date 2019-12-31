@@ -1,6 +1,17 @@
 # website2020
 The official website for the TEDx BITSHyderabad 2020 event
 
+# Sections:
+Home      -      .&nbsp;
+About     -      .&nbsp;
+Speakers  -  Done.&nbsp;
+Team      -  Done.&nbsp;
+Sponsors  -  Done.&nbsp;
+Archive   -  Done.&nbsp;
+Contact   -      .&nbsp;
+
+
 # TO DO:
-1) Set up a right and left button for scroll navigation in every horizontal section.&nbsp;
-2) Make info div appear when dowm arrow is clicked.&nbsp;
+1) Finish adding scroll functionality.&nbsp;
+2) Finish landing page.&nbsp;
+3) Add the Contact Us and About Us part.&nbsp;

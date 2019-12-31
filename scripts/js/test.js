@@ -1,5 +1,6 @@
 var speaker_info = document.getElementById("speakers-info");
 var executive_info = document.getElementById("executives-info");
+var archive_info = document.getElementById("archives-info");
 
 // SPEAKER VARIABLES
 var speaker_cards = document.getElementById("speakers");
@@ -64,6 +65,27 @@ for(var i = 0; i < spons_cards.childElementCount; i++){
     sponsors.push(card.id);
 }
 
+// ARCHIVESS VARIABLES
+var archive_cards = document.getElementById("archives");
+archive_cards = archive_cards.children[1].children[1];
+var archive_cards_len = archive_cards.childElementCount;
+var archives = [];
+for(var i = 0; i < archive_cards.childElementCount; i++){
+    var card = archive_cards.children[i];
+
+    // console.log(card.id);
+    sponsors.push(card.id);
+}
+
+function Archive(name, talk, link){
+    this.name = name
+    this.talk = talk
+    this.link = link
+}
+
+var archives_data = [];
+
+
 // Loading all the data from the JSON file
 function loadJSON(filename, callback){
     var speakers_file = new XMLHttpRequest();
@@ -102,6 +124,17 @@ window.onload = function() {
             // console.log(data[1]);
             // console.log(data[i].name);
             executives_data.push(new Executive(data[i].name, data[i].lead, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].twitter, data[i].picture_loc));
+        }
+    });
+    loadJSON("./json/archives_data.json", function(response){
+        var data = JSON.parse(response);
+        data = data["archive"];
+        // speakers_data = JSON.parse(response);
+        // console.log(data);
+        for(var i in data){
+            // console.log(data[1]);
+            // console.log(data[i].name);
+            archives_data.push(new Archive(data[i].name, data[i].talk, data[i].link));
         }
     });
 }
@@ -178,6 +211,27 @@ function shiftScaleUp(j, section_name){
                 card.classList.add('shiftCardRight50');
             }
         }
+    } else if(section_name == "archive"){
+        if(j==0){
+            for(var i=1;i<archive_cards_len;i++){
+                card = archive_cards.children[i];
+                card.classList.add('shiftCardRight90');
+            }
+        } else if(j==(archive_cards_len-1)){for(var i=0;i<(archive_cards_len - 1);i++){
+                card = archive_cards.children[i];
+                card.classList.add('shiftCardLeft90');
+            }
+        } else{
+            for(var i=0;i<j;i++){
+                var card = archive_cards.children[i];
+                card.classList.add('shiftCardLeft50');
+            }
+        
+            for(var i=(j+1);i<archive_cards.childElementCount;i++){
+                var card = archive_cards.children[i];
+                card.classList.add('shiftCardRight50');
+            }
+        }
     }
 }
 
@@ -247,6 +301,27 @@ function shiftScaleDown(j, section_name){
                 card.classList.remove('shiftCardRight50');
             }
         }
+    } else if(section_name == "archive"){
+        if(j==0){
+            for(var i=1;i<archive_cards_len;i++){
+                card = archive_cards.children[i];
+                card.classList.remove('shiftCardRight90');
+            }
+        } else if(j==(archive_cards_len-1)){for(var i=0;i<(archive_cards_len - 1);i++){
+                card = archive_cards.children[i];
+                card.classList.remove('shiftCardLeft90');
+            }
+        } else{
+            for(var i=0;i<j;i++){
+                var card = archive_cards.children[i];
+                card.classList.remove('shiftCardLeft50');
+            }
+        
+            for(var i=(j+1);i<archive_cards.childElementCount;i++){
+                var card = archive_cards.children[i];
+                card.classList.remove('shiftCardRight50');
+            }
+        }
     }
 }
 
@@ -288,6 +363,14 @@ function generate(j, type){
         image[0].srcset = executive["picture"];
 
         executive_info.style.display = "flex";
+    } else if(type == "archives"){
+        var archive = archives_data[j];
+        var video = archive_info.children[0].children[0];
+
+        console.log(archive["link"]);
+        video.src = archive["link"];
+
+        archive_info.style.display = "block";
     }
 }
 
@@ -296,4 +379,8 @@ $("#speakers-info").click(e => {
 });
 $("#executives-info").click(e => {
     executive_info.style.display = "none";
+});
+$("#archives-info").click(e => {
+    archive_info.children[0].children[0].src = "";
+    archive_info.style.display = "none";
 });
