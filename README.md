@@ -13,5 +13,7 @@ Contact   -      .&nbsp;
 
 # TO DO:
 1) Finish adding scroll functionality.&nbsp;
-2) Finish landing page.&nbsp;
+2) Add log and get tickets to the nav bar.&nbsp;
 3) Add the Contact Us and About Us part.&nbsp;
+
+# Landing Page
