@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: consolas;
+    font-family: 'Poppins', sans-serif;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
     color: beige;
     font-size: 20px;
     position: sticky;
@@ -31,6 +31,15 @@ body::-webkit-scrollbar {
     z-index: 1;
     /* background-color: rgba(0,0,0,0.7); */
     background-color: rgba(255,255,255,0.7);
+}
+.logo{
+    margin: 0 0 0 5%;
+    width: 50%;
+    height: 100%;
+}
+.logo > img{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -79,23 +88,27 @@ body::-webkit-scrollbar {
     left: 0;
     font-size: 60px;
     text-align: left;
-    margin: 0 0 3% 0;
+    font-weight: 800;
 }
 .theme-expl-div{
     width: 60%;
-    height: 50%;
+    height: 40%;
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
     color: rgb(255, 255, 255);
     margin: 0 0 0 10%;
-    font-size: 10px;
+    font-size: 8px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
 }
 .theme-expl{
     width: 80%;
     height: 70%;
-    font-size: 20px;
+    font-size: 15px;
     text-align: justify;
+    word-wrap: break-word;
     /* position: absolute;
     bottom: 0;
     right: 0; */
@@ -132,14 +145,15 @@ body::-webkit-scrollbar {
 .heading{
     width: 90%;
     margin: 2% auto 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 800;
 }
 .heading-text{
     width: 100%;
     color: whitesmoke;    
     font-weight: 400;
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 800;
     margin: 10px 30px;
 }
 .real-content{
@@ -444,7 +458,7 @@ body::-webkit-scrollbar {
     height: 100%;
     margin: auto;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     background-color: #000000;
     background-image: url("../../media/expanded_info_view_two.png");
     background-size: cover;
@@ -459,33 +473,36 @@ body::-webkit-scrollbar {
 }
 .people-name{
     width: 80%;
-    margin: 90px auto 0 auto;
-    font-size: 60px;
-    font-weight: bold; /* Helvetica Bold 12pt */
+    margin: 5% auto 0 auto;
+    font-size: 50px;
+    font-weight: 800; /* Helvetica Bold 12pt */
     
 }
 .people-occ{
     width: 80%;
-    margin: 0 auto 10px auto;
-    font-size: 30px;
-    font-weight: bold; /* Helvetica Bold 6pt */
+    margin: 0 auto 0 auto;
+    font-size: 25px;
+    font-weight: 600; /* Helvetica Bold 6pt */
 }
 .people-talk-name{
     width: 80%;
-    margin: 10px auto;
-    font-size: 40px;
-    font-weight: normal; /* Helvetica Regular  8pt (all caps) */
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: 400; /* Helvetica Regular  8pt (all caps) */
+    display: none;
 }
 .write-up{
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto;
     font-size: 15px;
-    font-weight: normal; /* Helvetica Regular 5pt */
+    font-weight: 400; /* Helvetica Regular 5pt */
+    white-space: pre-wrap;
 }
 .people-social-handles{
     width: 40%;
-    margin: 3% auto;
+    margin: 3% auto 0 auto;
     font-size: 15px;
+    font-weight: 600;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -567,6 +584,9 @@ body::-webkit-scrollbar {
 .archive-video > iframe{
     width: 70vw;
     height: 70vh;
+}
+#archives > .card {
+    border: 2px solid white;
 }
 .drop-animation{
     animation-name: divDrop;
