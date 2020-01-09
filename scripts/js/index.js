@@ -6,8 +6,8 @@ $(document).ready(function(){
     var today = new Date();
     console.log(today);
 
-    var remainingDays = Math.floor((eventDate - today)/(1000*60*60*24));
-    
+    // var remainingDays = Math.floor((eventDate - today)/(1000*60*60*24));
+    remainingDays = 2;
     document.getElementsByClassName("countdown")[0].innerText = remainingDays + " Days To Go!";
     
     console.log(remainingDays);
@@ -16,7 +16,7 @@ $(document).ready(function(){
     
     if(remainingDays >= 0 && remainingDays <= 30){
         if(remainingDays < 15){
-            factor = 2;
+            factor = 1.99;
         } else {
             factor = 1.95;
         }
