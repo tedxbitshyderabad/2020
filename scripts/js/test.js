@@ -347,7 +347,9 @@ function generate(j, type){
 
         image[0].srcset = speaker["picture"];
 
-        speaker_info.style.display = "flex";
+        speaker_info.classList.remove('pull-animation');
+        speaker_info.classList.add('drop-animation');
+        // speaker_info.style.display = "flex";
     } else if(type == "executives"){
         var executive = executives_data[j];
         var text = executive_info.children[0].children;
@@ -362,7 +364,9 @@ function generate(j, type){
 
         image[0].srcset = executive["picture"];
 
-        executive_info.style.display = "flex";
+        executive_info.classList.remove('pull-animation');
+        executive_info.classList.add('drop-animation');
+        // executive_info.style.display = "flex";
     } else if(type == "archives"){
         var archive = archives_data[j];
         var video = archive_info.children[0].children[0];
@@ -374,11 +378,15 @@ function generate(j, type){
     }
 }
 
-$("#speakers-info").click(e => {
-    speaker_info.style.display = "none";
+$("#close-btn-speakers").click(e => {
+    speaker_info.classList.add('pull-animation');
+    speaker_info.classList.remove('drop-animation');
+    // speaker_info.style.display = "none";
 });
-$("#executives-info").click(e => {
-    executive_info.style.display = "none";
+$("#close-btn-executives").click(e => {
+    executive_info.classList.add('pull-animation');
+    executive_info.classList.remove('drop-animation');
+    // executive_info.style.display = "none";
 });
 $("#archives-info").click(e => {
     archive_info.children[0].children[0].src = "";
