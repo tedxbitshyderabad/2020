@@ -392,3 +392,132 @@ $("#archives-info").click(e => {
     archive_info.children[0].children[0].src = "";
     archive_info.style.display = "none";
 });
+
+
+//speakers-scroll function work
+
+const spcards= document.querySelector('#card-speakers');
+const pcard = document.querySelector('.card');
+const size= pcard.clientWidth;
+const scroll_size= spcards.clientWidth;
+let counter=1;
+const prev = document.querySelector('#left-arrow-sp');
+const next = document.querySelector('#right-arrow-sp');
+prev.addEventListener('click',() =>{
+    
+    spcards.style.transition = "transform 0.4s ease-in-out";
+    
+    spcards.style.transform='translateX(0px)';
+    counter=1;
+   // next.firstElementChild.style.opacity='1';
+})
+next.addEventListener('click',() =>{
+  //  prev.firstElementChild.style.opacity='1';
+    const val = 3/(scroll_size/size);
+    spcards.style.transition = "transform 0.4s ease-in-out";
+    
+    if(counter>val*1.5){
+     //   next.firstElementChild.style.opacity='0';
+    return;  }
+    else{        
+        counter++;
+    spcards.style.transform='translateX('+(-(size+prev.scrollWidth)*(counter))+'px)';
+    //spcards.style.width='90%';
+    }
+ 
+})
+
+
+//executives-scroll function work
+
+const spcards1= document.querySelector('#card-executives');
+const scroll_size1= spcards1.clientWidth;
+let counter1=0;
+const prev1 = document.querySelector('#left-arrow-ex');
+const next1 = document.querySelector('#right-arrow-ex');
+prev1.addEventListener('click',() =>{
+    
+    spcards1.style.transition = "transform 0.4s ease-in-out";
+    
+    spcards1.style.transform='translateX(0px)';
+    counter1=0;
+    //next1.firstElementChild.style.opacity='1';
+})
+next1.addEventListener('click',() =>{
+
+    const val1 = 11/(scroll_size1/size);
+    spcards1.style.transition = "transform 0.4s ease-in-out";
+    
+    if(counter1>val1){
+    return;  }
+    else{        
+        counter1++;
+spcards1.style.transform='translateX('+(-(size*2.5+prev.scrollWidth)*(counter1))+'px)';
+    
+}
+ 
+})
+
+
+//sponsors-scroll function work
+
+const spcards2= document.querySelector('#card-sponsors');
+const scroll_size2= spcards2.clientWidth;
+let counter2=1;
+const prev2 = document.querySelector('#left-arrow-spo');
+const next2 = document.querySelector('#right-arrow-spo');
+prev2.addEventListener('click',() =>{
+    
+    spcards2.style.transition = "transform 0.4s ease-in-out";
+    
+    spcards2.style.transform='translateX(0px)';
+    counter2=0;
+})
+next2.addEventListener('click',() =>{
+
+
+    const val2 = 7/(scroll_size2/size);
+    spcards2.style.transition = "transform 0.4s ease-in-out";
+    
+    if(counter2>val2*1.5)
+    return;  
+    else{
+        
+        counter2++;
+    spcards2.style.transform='translateX('+(-(size+prev2.scrollWidth)*(counter2))+'px)';
+    //spcards.style.width='90%';
+    }
+ 
+})
+
+
+//archive-scroll function work
+
+const spcards3= document.querySelector('#card-archive');
+const scroll_size3= spcards3.clientWidth;
+let counter3=1;
+const prev3 = document.querySelector('#left-arrow-arc');
+const next3 = document.querySelector('#right-arrow-arc');
+prev3.addEventListener('click',() =>{
+    
+    spcards3.style.transition = "transform 0.4s ease-in-out";
+    
+    spcards3.style.transform='translateX(0px)';
+    counter3=0;
+    next3.firstElementChild.style.opacity='1';
+})
+next3.addEventListener('click',() =>{
+    prev3.firstElementChild.style.opacity='1';
+    const val3 = 7/(scroll_size3/size);
+    spcards3.style.transition = "transform 0.4s ease-in-out";
+    
+    if(counter3>val3)
+    return;  
+    else{
+        
+        counter3++;
+    spcards3.style.transform='translateX('+(-(size+prev3.clientWidth)*(counter3))+'px)';
+    //spcards.style.width='90%';
+    }
+ 
+})

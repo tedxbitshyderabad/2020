@@ -24,7 +24,20 @@
         <div class="logo">
             <img src="media/tedxlogo.png" alt="TEDx BITSHyderabad">
         </div>
-        <div class="get-tickets"></div>
+        <div class="timer">
+            <p id="demo"></p>
+        </div>
+        </div>
+        <div class="get-tickets">
+            <figure class="center1">
+                <a href="main/index.html">
+                <div>
+                  <span class="span">Book Tickets</span>
+                  <span class="span"><b>NOW<b></span>
+                </div>
+                  </a>
+              </figure>
+        </div>
     </nav>
 
     <div class="container">
@@ -52,13 +65,13 @@
                             <h2 class="heading-text">Our Speakers</h3>    
                     </div>
                     <div class="real-content">
-                        <div class="left-arrow">
+                        <div class="left-arrow" id="left-arrow-sp">
                             <div class="left-button">
                                 <span class="line" id="left-top"></span>
                                 <span class="line" id="left-bottom"></span>
                             </div>
                         </div>
-                        <div class="cards">
+                        <div class="cards" id="card-speakers">
                             <div onmouseover="shiftScaleUp(1, 'speakers')" onmouseout="shiftScaleDown(1, 'speakers')" class="first-card" id="speaker-one 1">
                                 <div class="card-bg-img">
                                     <img src="./media/speakers/ted1.jpg" alt="Error XD">
@@ -179,7 +192,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-arrow">
+                        <div class="right-arrow" id="right-arrow-sp">
                             <div class="right-button">
                                 <span class="line" id="right-top"></span>
                                 <span class="line" id="right-bottom"></span>
@@ -223,12 +236,12 @@
 
                     <div class="real-content">
                         <div class="left-arrow">
-                            <div class="left-button">
+                            <div class="left-button" id="left-arrow-ex">
                                 <span class="line" id="left-top"></span>
                                 <span class="line" id="left-bottom"></span>
                             </div>
                         </div>
-                        <div class="cards">
+                        <div class="cards" id="card-executives">
                             <div onmouseover="shiftScaleUp(1, 'executives')" onmouseout="shiftScaleDown(1, 'executives')" class="first-card" id="speaker-one">
                                 <div class="card-bg-img">
                                     <img src="./media/speakers/ted1.jpg" alt="Error XD">
@@ -394,7 +407,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-arrow">
+                        <div class="right-arrow" id="right-arrow-ex">
                             <div class="right-button">
                                 <span class="line" id="right-top"></span>
                                 <span class="line" id="right-bottom"></span>
@@ -435,13 +448,13 @@
                             <h3 class="heading-text">Our Partners</h3>    
                     </div>
                     <div class="real-content">
-                        <div class="left-arrow">
+                        <div class="left-arrow" id="left-arrow-spo">
                             <div class="left-button">
                                 <span class="line" id="left-top"></span>
                                 <span class="line" id="left-bottom"></span>
                             </div>
                         </div>
-                        <div class="cards">
+                        <div class="cards" id="card-sponsors">
                             <div onmouseover="shiftScaleUp(1, 'sponsors')" onmouseout="shiftScaleDown(1, 'sponsors')" class="first-card" id="speaker-one">
                                 <div class="card-bg-img">
                                     <img src="./media/speakers/ted1.jpg" alt="Error XD">
@@ -554,7 +567,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-arrow">
+                        <div class="right-arrow" id="right-arrow-spo">
                             <div class="right-button">
                                 <span class="line" id="right-top"></span>
                                 <span class="line" id="right-bottom"></span>
@@ -570,13 +583,13 @@
                                 <h3 class="heading-text">Our Histories</h3>
                         </div>
                         <div class="real-content">
-                            <div class="left-arrow">
+                            <div class="left-arrow" id="left-arrow-arc">
                                 <div class="left-button">
                                     <span class="line" id="left-top"></span>
                                     <span class="line" id="left-bottom"></span>
                                 </div>
                             </div>
-                            <div class="cards">
+                            <div class="cards" id="card-archive">
                                 <div onmouseover="shiftScaleUp(1, 'archive')" onmouseout="shiftScaleDown(1, 'archive')" class="first-card" id="speaker-one">
                                     <div class="card-bg-img">
                                         <img src="https://img.youtube.com/vi/_oL4C0QaMgo/hqdefault.jpg" alt="Error XD">
@@ -682,7 +695,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="right-arrow">
+                            <div class="right-arrow" id="right-arrow-arc">
                                 <div class="right-button">
                                     <span class="line" id="right-top"></span>
                                     <span class="line" id="right-bottom"></span>
@@ -707,5 +720,36 @@
     </div>
          
     <script src="./scripts/js/test.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 9, 2020 09:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + " Days " + hours + " h "
+  + minutes + " min " + seconds + " sec "; ;
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+        
 </body>
 </html>
