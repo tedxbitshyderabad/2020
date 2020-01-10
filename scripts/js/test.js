@@ -449,13 +449,12 @@ next1.addEventListener('click',() =>{
     spcards1.style.transition = "transform 0.4s ease-in-out";
     
     if(counter1>val1){
-    return;  }
+        return;  
+    }
     else{        
         counter1++;
-spcards1.style.transform='translateX('+(-(size*2.5+prev.scrollWidth)*(counter1))+'px)';
-    
-}
- 
+        spcards1.style.transform='translateX('+(-(size*2.5+prev.scrollWidth)*(counter1))+'px)';
+    }
 })
 
 
