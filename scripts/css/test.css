@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
 .get-tickets{
   margin: 1vh 10vw 1vh 6vw;
   width: 20vw;
-  height: 8vh;
+  height: 9vh;
 }
 .book-btn {  /*BUTTON*/
   margin: 0 auto;
@@ -93,6 +93,7 @@ figure:hover div {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
   /* padding:5px; */
 }
 .btn-text:nth-child(1) {
@@ -741,22 +742,24 @@ figure:hover div {
   background-attachment: fixed;
   overflow: hidden;
   position: relative;
-  height: 90vh;
+  height: 100vh;
 }
 .contact > .contact-container {
   width: 100vw;
   height: 75vh;
   margin: 7.5vh 0;
+  
 }
 .contact > .contact-container > .venue {
   width: 80vw;
   margin: 0 auto;
 }
 .contact > .contact-container > .venue > .venue-heading{
-  color:red; 
+  color:rgb(255, 0, 0); 
   font-size: 40px;
   font-weight: 600;
 }
+
 .contact > .contact-container > .venue > .venue-campus{
   font-weight: 400;
   color:white;
@@ -780,7 +783,7 @@ figure:hover div {
   text-transform: uppercase;
   position: relative;
   margin-bottom: 15px;
-  padding-left: 850px;
+  padding-left: 900px;
 }
 .section-title:before {
   width: 100px;
@@ -822,7 +825,7 @@ figure:hover div {
   width: 80%;
   height: 80%;
   margin: 0 auto;
-}
+ }
 .form-content {
   width: 100%;
   height: 100%;
@@ -835,6 +838,7 @@ figure:hover div {
   display: block;
   line-height: 26px;
   font-size: 14px;
+  border-radius: 4px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
   padding: 2% 5%;
   color: #848484;
@@ -858,25 +862,53 @@ figure:hover div {
 }
 .form-submit > .btn {
   display: inline-block;
+  border-radius: 8px;
   width: 100%;
   background-color: red;
   color: white;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   padding: 4% 5%;  
   border: 1px solid white;
   text-transform: uppercase;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
-  transition: all 0.2s linear; 
+  transition: all 0.2s linear;
+
 }
 .form-submit > .btn:hover, .btn:active {
   background-color: white;
   color: red;
   border: 1px solid red;
   outline: none;
+}
+
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 /* Contact Home Page Section END */
 
