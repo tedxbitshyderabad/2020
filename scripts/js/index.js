@@ -13,19 +13,19 @@ $(document).ready(function(){
     
     var factor = 0;
     
-    if(remainingDays >= 0 && remainingDays <= 30){
-        if(remainingDays < 15){
-            factor = 1.99;
-        } else {
-            factor = 1.95;
-        }
+    // if(remainingDays >= 0 && remainingDays <= 30){
+    //     if(remainingDays < 15){
+    //         factor = 1.99;
+    //     } else {
+    //         factor = 1.95;
+    //     }
 
-        var top = ((30.5 + remainingDays*factor) / 100)*height;
+    //     var top = ((30.5 + remainingDays*factor) / 100)*height;
         
-        $(".day").css("top", top);
-    } else if(remainingDays >= 1) {
-        $(".day").css("top", 0.9*height);
-    } else{
-        $(".day").css("top", 0.305*height);
-    }
+    //     $(".day").css("top", top);
+    // } else if(remainingDays >= 1) {
+    //     $(".day").css("top", 0.9*height);
+    // } else{
+    //     $(".day").css("top", 0.305*height);
+    // }
 });
