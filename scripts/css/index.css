@@ -197,9 +197,13 @@ body::-webkit-scrollbar{
   text-decoration: none;
   color: red;
   transition: color 1s;
+  font-size: 6.5vh;
+  font-weight: 600;
 }
 .next-btn > a > i{
-  margin: 25% 27%;
+  margin: 25%;
+  width: 50%;
+  height: 50%;
 }
 .next-btn:hover{
   background-color: red;

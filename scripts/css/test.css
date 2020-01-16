@@ -46,6 +46,7 @@ body::-webkit-scrollbar {
   margin: 1vh 2vw;
   width: 20vw;
   height: 8vh;
+  font-size: 2.7vh;
 }
 #demo {
   text-align: center;
@@ -153,7 +154,7 @@ figure:hover div {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 60px;
+    font-size: 7vh;
     text-align: left;
     font-weight: 800;
 }
@@ -173,7 +174,7 @@ figure:hover div {
 .theme-expl{
     width: 80%;
     height: 70%;
-    font-size: 15px;
+    font-size: 2vh;
     text-align: justify;
     word-wrap: break-word;
     /* position: absolute;
@@ -219,7 +220,7 @@ figure:hover div {
     width: 100%;
     color: whitesmoke;    
     font-weight: 400;
-    font-size: 3em;
+    font-size: 8vh;
     font-weight: 800;
     margin: 10px 30px;
     /* overflow-x: hidden; */
@@ -312,6 +313,12 @@ figure:hover div {
 .right-button > #right-bottom{
     transform: rotate(-45deg) translate(-45%, 50%);
 }
+#speakers .left-arrow{
+	display: none;
+}
+#speakers .right-arrow{
+	display: none;
+}
 .cards{
     width: 90%;
     height: 350px;
@@ -323,6 +330,14 @@ figure:hover div {
     /* overflow-x: scroll;
     overflow-y: hidden; */
     justify-content: flex-start;
+}
+#speakers .cards{
+	margin: 0 auto;
+	width: 90%;
+    height: 350px;
+	white-space: nowrap;
+	display: flex;
+    justify-content: space-evenly;
 }
 .cards::-webkit-scrollbar {
     display: none;
@@ -508,7 +523,7 @@ figure:hover div {
 .people-name{
   width: 80%;
   margin: 5% auto 0 auto;
-  font-size: 50px;
+  font-size: 7vh;
   font-weight: 800;
 }
 #executives > .people-info > .info > .info-placer > .people-name{
@@ -517,7 +532,7 @@ figure:hover div {
 .people-occ{
     width: 80%;
     margin: 0 auto 0 auto;
-    font-size: 25px;
+    font-size: 4vh;
     font-weight: 600;
 }
 #executives > .people-info > .info > .info-placer > .people-occ{
@@ -526,7 +541,7 @@ figure:hover div {
 .people-talk-name{
     width: 80%;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 2vh;
     font-weight: 400;
     display: none;
 }
@@ -536,7 +551,7 @@ figure:hover div {
 .write-up{
     width: 80%;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 1.7vh;
     font-weight: 400; /* Helvetica Regular 5pt */
     white-space: pre-wrap;
 }
@@ -546,7 +561,7 @@ figure:hover div {
 .people-social-handles{
     width: 40%;
     margin: 3% auto 0 auto;
-    font-size: 15px;
+    font-size: 2vh;
     font-weight: 400;
     display: flex;
     flex-direction: row;
