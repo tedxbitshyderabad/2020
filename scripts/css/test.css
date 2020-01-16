@@ -46,6 +46,7 @@ body::-webkit-scrollbar {
   margin: 1vh 2vw;
   width: 20vw;
   height: 8vh;
+  font-size: 2.7vh;
 }
 #demo {
   text-align: center;
@@ -72,6 +73,7 @@ body::-webkit-scrollbar {
   width: 50%;
   height: 100%;
   margin: 0 auto;
+  font-size: 2vh;
 }
 figure div {
   height: 100%;
@@ -89,7 +91,7 @@ figure:hover div {
   position: absolute;
   box-sizing: border-box;
   border: 3px solid #e62b1e;
-  line-height: 35px;
+  line-height: 3.5vh;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -153,7 +155,7 @@ figure:hover div {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 60px;
+    font-size: 7vh;
     text-align: left;
     font-weight: 800;
 }
@@ -173,7 +175,7 @@ figure:hover div {
 .theme-expl{
     width: 80%;
     height: 70%;
-    font-size: 15px;
+    font-size: 2vh;
     text-align: justify;
     word-wrap: break-word;
     /* position: absolute;
@@ -219,7 +221,7 @@ figure:hover div {
     width: 100%;
     color: whitesmoke;    
     font-weight: 400;
-    font-size: 3em;
+    font-size: 8vh;
     font-weight: 800;
     margin: 10px 30px;
     /* overflow-x: hidden; */
@@ -312,6 +314,12 @@ figure:hover div {
 .right-button > #right-bottom{
     transform: rotate(-45deg) translate(-45%, 50%);
 }
+#speakers .left-arrow{
+	display: none;
+}
+#speakers .right-arrow{
+	display: none;
+}
 .cards{
     width: 90%;
     height: 350px;
@@ -323,6 +331,14 @@ figure:hover div {
     /* overflow-x: scroll;
     overflow-y: hidden; */
     justify-content: flex-start;
+}
+#speakers .cards{
+	margin: 0 auto;
+	width: 90%;
+    height: 350px;
+	white-space: nowrap;
+	display: flex;
+    justify-content: space-evenly;
 }
 .cards::-webkit-scrollbar {
     display: none;
@@ -508,7 +524,7 @@ figure:hover div {
 .people-name{
   width: 80%;
   margin: 5% auto 0 auto;
-  font-size: 50px;
+  font-size: 7vh;
   font-weight: 800;
 }
 #executives > .people-info > .info > .info-placer > .people-name{
@@ -517,7 +533,7 @@ figure:hover div {
 .people-occ{
     width: 80%;
     margin: 0 auto 0 auto;
-    font-size: 25px;
+    font-size: 4vh;
     font-weight: 600;
 }
 #executives > .people-info > .info > .info-placer > .people-occ{
@@ -526,7 +542,7 @@ figure:hover div {
 .people-talk-name{
     width: 80%;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 2vh;
     font-weight: 400;
     display: none;
 }
@@ -536,7 +552,7 @@ figure:hover div {
 .write-up{
     width: 80%;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 1.7vh;
     font-weight: 400; /* Helvetica Regular 5pt */
     white-space: pre-wrap;
 }
@@ -546,7 +562,7 @@ figure:hover div {
 .people-social-handles{
     width: 40%;
     margin: 3% auto 0 auto;
-    font-size: 15px;
+    font-size: 2vh;
     font-weight: 400;
     display: flex;
     flex-direction: row;
@@ -696,8 +712,17 @@ figure:hover div {
   margin-top: 0;
   width: 100%;
 }
+.services-wrapper:nth-child(1) {
+  height: 40vh;
+}
+.services-wrapper:nth-child(2) {
+  height: 25vh;
+}
+.services-wrapper:nth-child(3) {
+  height: 25vh;
+}
 .services-item {
-  padding: 40px 20px;
+  padding: 4vh 2vw;
   text-align: center;
   margin: 0 0 0 0;
   transition: all 0.3s ease-in-out 0s;
@@ -708,7 +733,6 @@ figure:hover div {
 .services-item > .services-content > h3 {
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 50px;
   line-height: 36px;
   color: red;
 }
@@ -774,16 +798,14 @@ figure:hover div {
   width: 80vw;
 }
 .section-title {
-  font-size: 36px;
+  width: 25vw;
+  font-size: 4vh;
   color: red;
-  line-height: 52px;
-  padding-bottom: 20px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 15px;
-  padding-left: 900px;
+  padding: 0 5vw 0 50vw;
 }
 .section-title:before {
   width: 100px;
@@ -812,37 +834,41 @@ figure:hover div {
 }
 .contact > .contact-container > .container-form {
   width: 80vw;
+  height: 50vh;
   margin: 0 auto;
 }
 .contact > .contact-container > .container-form > .form-wrapper {
-  margin-left: 950px; 
-  margin-right: 50px;
+  width: 25vw;
+  height: 100%;
+  margin: 2vh 5vw 0 50vw;
   background-color: white;
-  padding: 2vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .contact > .contact-container > .container-form > .form-wrapper > .contactForm {
   width: 80%;
-  height: 80%;
+  height: 90%;
   margin: 0 auto;
- }
+  padding: 5% 0;
+}
 .form-content {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .form-content > .form-group {
-  margin-bottom: 30px;
+  width: 90%;
 }
 .form-content >  .form-group > .form-control {
-  width: 90%;
+  width: 100%;
+  padding: 2% 5%;
   display: block;
   line-height: 26px;
-  font-size: 14px;
-  border-radius: 4px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-  padding: 2% 5%;
   color: #848484;
   background: rgba(234,234,234,0.5);
+  font-size: 14px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0,0,0,0.3);
   background-clip: padding-box;
   transition: all 500ms ease;
@@ -862,7 +888,6 @@ figure:hover div {
 }
 .form-submit > .btn {
   display: inline-block;
-  border-radius: 8px;
   width: 100%;
   background-color: red;
   color: white;
@@ -871,6 +896,7 @@ figure:hover div {
   font-size: 13px;
   padding: 4% 5%;  
   border: 1px solid white;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;

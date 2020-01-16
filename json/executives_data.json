@@ -47,15 +47,6 @@
             "picture_loc" : "./media/executives/speaker_research.jpg"
         },
         {
-            "name" : "Ayushi Mahendra", 
-            "lead" : "Publicity Head", 
-            "write_up" : "A write up for everyone.", 
-            "facebook" : "#", 
-            "insta" : "#", 
-            "linkedin" : "#", 
-            "picture_loc" : "./media/speakers/ted2.jpg"
-        },
-        {
             "name" : "Soumyadeep Basu", 
             "lead" : "Multimedia Head", 
             "write_up" : "Observant. Passionate. Meticulous. ", 

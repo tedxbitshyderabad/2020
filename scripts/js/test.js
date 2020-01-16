@@ -421,7 +421,7 @@ let counter_sp = 0;
 let pushedBy_sp = 0;
 
 // Executive Variables
-const noOfExecutives = 11;
+const noOfExecutives = 10;
 let counter_ex = 0;
 let pushedBy_ex = 0;
 
@@ -572,6 +572,7 @@ $(".right-button").on('click', function(){
     var cards = $('#' + section).children(".real-content").children(".cards");
     var sectionWidth = cards.innerWidth();
     var noOfCards = Math.floor(sectionWidth / cardWidth);
+    console.log(noOfCards);
     var noOfActualCards = 0;
     var counter = 0;
     var pushedBy = 0;
