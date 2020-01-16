@@ -30,20 +30,19 @@
         {
             "name" : "Rahul Panjwani", 
             "lead" : "Curator", 
-            "write_up" : "A write up for everyone.", 
-            "facebook" : "#", 
-            "insta" : "#", 
-            "linkedin" : "#", 
-            "twitter" : "#", 
+            "write_up" : "Rebel. Demotional. Jugaadu", 
+            "facebook" : "https://www.facebook.com/profile.php?id=100017323215435", 
+            "insta" : "https://www.instagram.com/rahulpanjwani508/", 
+            "linkedin" : "https://www.linkedin.com/in/rahul-panjwani/", 
             "picture_loc" : "./media/executives/curator.jpg"
         },
         {
             "name" : "Suhani Gupta", 
             "lead" : "Speaker Research Head", 
-            "write_up" : "A write up for everyone.", 
-            "facebook" : "#", 
-            "insta" : "#", 
-            "linkedin" : "#", 
+            "write_up" : "", 
+            "facebook" : "https://www.facebook.com/suhani.gupta.568", 
+            "insta" : "https://instagram.com/suhanigupta?igshid=xl78i18ihzbq", 
+            "linkedin" : "http://linkedin.com/in/suhani-gupta-96491a171", 
             "picture_loc" : "./media/executives/speaker_research.jpg"
         },
         {

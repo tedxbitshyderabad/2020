@@ -135,8 +135,9 @@ figure:hover div {
         rgba(0,0,0,0.4) 50%,
         rgba(0,0,0,1)),
         url("../../media/home.png");
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -146,7 +147,7 @@ figure:hover div {
     width: 60%;
     height: 50%;
     position: relative;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
     margin: 0 0 0 10%;
 }
 .theme-name{
@@ -356,8 +357,9 @@ figure:hover div {
     z-index: 1;
     border: 0px solid white;
     opacity: 1;
-    transition: transform 1s, z-index 1s, opacity 1s;
-    transition-delay: 0.2s;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0.5);
+	transition: transform 1s, z-index 1s, opacity 1s, box-shadow 1s;
+	transition-delay: 0.2s;
 }
 .first-card{
     width: 375px;
@@ -369,9 +371,10 @@ figure:hover div {
     z-index: 1;
     border: 0px solid white;
     opacity: 1;
-    transform-origin: center left;
-    transition: transform 1s, z-index 1s, opacity 1s, width 1s, height 1s;
-    transition-delay: 0.2s;
+	transform-origin: center left;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0.5);
+    transition: transform 1s, z-index 1s, opacity 1s, width 1s, height 1s, box-shadow 1s;
+	transition-delay: 0.2s;
 }
 .last-card{
     width: 375px;
@@ -382,10 +385,11 @@ figure:hover div {
     transform: scale(1);
     z-index: 1;
     border: 0px solid white;
-    opacity: 1;
+	opacity: 1;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0.5);
     transform-origin: center right;
-    transition: transform 1s, z-index 1s, opacity 1s;
-    transition-delay: 0.2s;
+    transition: transform 1s, z-index 1s, opacity 1s, box-shadow 1s;
+	transition-delay: 0.2s;
 }
 .executives {
     width: 375px;
@@ -443,12 +447,13 @@ figure:hover div {
     cursor: pointer;
 }
 .card-arrow > h2{
-    margin: 0 0 10px 0;
+    margin: 0 1vw 1vh 0;
 }
 .card:hover{
     transform: scale(1.35);
     z-index: 13;
-    opacity: 1;
+	opacity: 1;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,1);
 }
 .card:hover .card-details{
     opacity: 1;
@@ -457,7 +462,8 @@ figure:hover div {
 .first-card:hover{
     transform: scale(1.35);
     z-index: 3;
-    opacity: 1;
+	opacity: 1;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,1);
 }
 .first-card:hover .card-details{
     opacity: 1;
@@ -466,7 +472,8 @@ figure:hover div {
 .last-card:hover{
     transform: scale(1.35);
     z-index: 3;
-    opacity: 1;
+	opacity: 1;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,1);
 }
 .last-card:hover .card-details{
     opacity: 1;
@@ -480,19 +487,23 @@ figure:hover div {
 }
 .shiftCardRight50{
     transform: translate3d(50px, 0 ,0);
-    opacity: 0.5;
+	opacity: 0.5;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0);
 }
 .shiftCardLeft50{
     transform: translate3d(-50px, 0 ,0);
-    opacity: 0.5;
+	opacity: 0.5;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0);
 }
 .shiftCardRight90{
     transform: translate3d(90px, 0 ,0);
-    opacity: 0.5;
+	opacity: 0.5;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0);
 }
 .shiftCardLeft90{
     transform: translate3d(-90px, 0 ,0);
-    opacity: 0.5;
+	opacity: 0.5;
+	box-shadow: 0 0 2px 0px rgba(255,255,255,0);
 }
 .people-info{
     width: 100%;
@@ -513,7 +524,7 @@ figure:hover div {
   color: white;
   background-color: #000000;
   background-image: url("../../media/expanded_info_view_two.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .info-placer{
@@ -529,6 +540,7 @@ figure:hover div {
 }
 #executives > .people-info > .info > .info-placer > .people-name{
   width: 85%;
+  font-size: 5vh;
 }
 .people-occ{
     width: 80%;
@@ -536,9 +548,9 @@ figure:hover div {
     font-size: 4vh;
     font-weight: 600;
 }
-#executives > .people-info > .info > .info-placer > .people-occ{
+/* #executives > .people-info > .info > .info-placer > .people-occ{
   font-size: 35px;
-}
+} */
 .people-talk-name{
     width: 80%;
     margin: 0 auto;
@@ -546,9 +558,9 @@ figure:hover div {
     font-weight: 400;
     display: none;
 }
-#executives > .people-info > .info > .info-placer > .people-talk-name{
+/* #executives > .people-info > .info > .info-placer > .people-talk-name{
   font-size: 35px;
-}
+} */
 .write-up{
     width: 80%;
     margin: 0 auto;
@@ -557,7 +569,7 @@ figure:hover div {
     white-space: pre-wrap;
 }
 #executives > .people-info > .info > .info-placer > .write-up{
-  font-size: 30px;
+  font-size: 3vh;
 }
 .people-social-handles{
     width: 40%;
@@ -707,6 +719,9 @@ figure:hover div {
 .about-us{
   height: 90vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .services-wrapper {
   margin-top: 0;
@@ -737,9 +752,10 @@ figure:hover div {
   color: red;
 }
 .services-item > .services-content > .underline-heading {
-  width: 100%;
-  height: 20px;
-  background-color: white;
+	margin: 1vh auto;
+	width: 85%;
+	/* height: 20px; */
+	background-color: white;
 }
 .services-item > .services-content > p {
   font-size:16px;
@@ -782,17 +798,20 @@ figure:hover div {
   color:rgb(255, 0, 0); 
   font-size: 40px;
   font-weight: 600;
+  width: 20vw;
 }
 
 .contact > .contact-container > .venue > .venue-campus{
   font-weight: 400;
   color:white;
   font-size: 20px;
+  width: 20vw;
 }
 .contact > .contact-container > .venue > .venue-address{
   font-weight: 400;
   color:white;
   font-size: 19px;
+  width: 20vw;
 }
 .contact > .contact-container > .venue > .section-title-header {
   width: 80vw;

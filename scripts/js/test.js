@@ -480,7 +480,7 @@ $(".left-button").on('click', function(){
     if(counter > 1){
         console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy -= 395;
+        pushedBy -= cardWidth;
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
         counter--;
         switch(section){
@@ -508,7 +508,7 @@ $(".left-button").on('click', function(){
     } else if(counter == 1 || counter == num){
         console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy -= (margin + 395);
+        pushedBy -= (margin + cardWidth);
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
         counter--;
         switch(section){
@@ -533,35 +533,35 @@ $(".left-button").on('click', function(){
                 break;
             }
         }
-    } else if(counter == 0){
-        console.log(counter);
-        cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy -= (margin);
-        cards.css("transform", 'translateX(-'+pushedBy+'px)');
-        counter--;
-        switch(section){
-            case("speakers"):{
-                pushedBy_sp = pushedBy;
-                counter_sp = counter;
-                break;
-            }
-            case("executives"):{
-                pushedBy_ex = pushedBy;
-                counter_ex = counter;
-                break;
-            }
-            case("sponsors"):{
-                pushedBy_spon = pushedBy;
-                counter_spon = counter;
-                break;
-            }
-            case("archives"):{
-                pushedBy_ar = pushedBy;
-                counter_ar = counter;
-                break;
-            }
-        }
-    }
+    } // else if(counter == 0){
+    //     console.log(counter);
+    //     cards.css("transition", "transform 0.4s ease-in-out");
+    //     pushedBy -= (margin);
+    //     cards.css("transform", 'translateX(-'+pushedBy+'px)');
+    //     counter--;
+    //     switch(section){
+    //         case("speakers"):{
+    //             pushedBy_sp = pushedBy;
+    //             counter_sp = counter;
+    //             break;
+    //         }
+    //         case("executives"):{
+    //             pushedBy_ex = pushedBy;
+    //             counter_ex = counter;
+    //             break;
+    //         }
+    //         case("sponsors"):{
+    //             pushedBy_spon = pushedBy;
+    //             counter_spon = counter;
+    //             break;
+    //         }
+    //         case("archives"):{
+    //             pushedBy_ar = pushedBy;
+    //             counter_ar = counter;
+    //             break;
+    //         }
+    //     }
+    // }
 });
 $(".right-button").on('click', function(){
     console.log($(this));
@@ -606,7 +606,7 @@ $(".right-button").on('click', function(){
     if(counter == 0){
         console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy += (margin + 395);
+        pushedBy += (margin + cardWidth);
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
         counter++;
         switch(section){
@@ -634,7 +634,7 @@ $(".right-button").on('click', function(){
     } else if(counter < num){
         console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy += 395;
+        pushedBy += cardWidth;
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
         counter++;
         switch(section){
@@ -659,35 +659,35 @@ $(".right-button").on('click', function(){
                 break;
             }
         }
-    } else if(counter == num){
-        console.log(counter);
-        cards.css("transition", "transform 0.4s ease-in-out");
-        pushedBy += margin;
-        cards.css("transform", 'translateX(-'+pushedBy+'px)');
-        counter++;
-        switch(section){
-            case("speakers"):{
-                pushedBy_sp = pushedBy;
-                counter_sp = counter;
-                break;
-            }
-            case("executives"):{
-                pushedBy_ex = pushedBy;
-                counter_ex = counter;
-                break;
-            }
-            case("sponsors"):{
-                pushedBy_spon = pushedBy;
-                counter_spon = counter;
-                break;
-            }
-            case("archives"):{
-                pushedBy_ar = pushedBy;
-                counter_ar = counter;
-                break;
-            }
-        }
-    }
+    } // else if(counter == num){
+    //     console.log(counter);
+    //     cards.css("transition", "transform 0.4s ease-in-out");
+    //     pushedBy += margin;
+    //     cards.css("transform", 'translateX(-'+pushedBy+'px)');
+    //     counter++;
+    //     switch(section){
+    //         case("speakers"):{
+    //             pushedBy_sp = pushedBy;
+    //             counter_sp = counter;
+    //             break;
+    //         }
+    //         case("executives"):{
+    //             pushedBy_ex = pushedBy;
+    //             counter_ex = counter;
+    //             break;
+    //         }
+    //         case("sponsors"):{
+    //             pushedBy_spon = pushedBy;
+    //             counter_spon = counter;
+    //             break;
+    //         }
+    //         case("archives"):{
+    //             pushedBy_ar = pushedBy;
+    //             counter_ar = counter;
+    //             break;
+    //         }
+    //     }
+    // }
 });
 
 // Speakers Scroll
