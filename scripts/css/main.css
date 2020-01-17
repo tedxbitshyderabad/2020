@@ -23,8 +23,7 @@ width: 100vw;
 position: fixed;
 top: 0;
 left: 0;
-color: beige;
-font-size: 20px;
+color: white;
 /* position: sticky; */
 height: 10vh;
 z-index: 1;
@@ -146,7 +145,7 @@ transform: rotateX(90deg) translate3d(0, 0, 20px);
   width: 60%;
   height: 50%;
   position: relative;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
   margin: 0 0 0 10%;
 }
 .theme-name{
@@ -167,7 +166,6 @@ transform: rotateX(90deg) translate3d(0, 0, 20px);
   left: 0;
   color: rgb(255, 255, 255);
   margin: 0 0 0 10%;
-  font-size: 8px;
   font-weight: 400;
   display: flex;
   flex-wrap: wrap;
@@ -314,10 +312,10 @@ transform: rotateX(90deg) translate3d(0, 0, 20px);
 .right-button > #right-bottom{
   transform: rotate(-45deg) translate(-45%, 50%);
 }
-#speakers .left-arrow{
+#speakers .left-arrow, #sponsors .left-arrow{
 display: none;
 }
-#speakers .right-arrow{
+#speakers .right-arrow, #sponsors .right-arrow{
 display: none;
 }
 .cards{
@@ -332,7 +330,7 @@ display: none;
   overflow-y: hidden; */
   justify-content: flex-start;
 }
-#speakers .cards{
+#speakers .cards, #sponsors .cards{
 margin: 0 auto;
 width: 90%;
   height: 350px;
@@ -529,6 +527,7 @@ font-weight: 800;
 }
 #executives > .people-info > .info > .info-placer > .people-name{
 width: 85%;
+font-size: 5vh;
 }
 .people-occ{
   width: 80%;
@@ -537,7 +536,7 @@ width: 85%;
   font-weight: 600;
 }
 #executives > .people-info > .info > .info-placer > .people-occ{
-font-size: 35px;
+font-size: 4vh;
 }
 .people-talk-name{
   width: 80%;
@@ -557,7 +556,7 @@ font-size: 35px;
   white-space: pre-wrap;
 }
 #executives > .people-info > .info > .info-placer > .write-up{
-font-size: 30px;
+font-size: 3vh;
 }
 .people-social-handles{
   width: 40%;
@@ -575,7 +574,7 @@ font-size: 30px;
 .people-social-handles > li{
   list-style: none;
   margin: auto;
-  font-size: 20px;
+  font-size: 2vh;
 }
 .pic{
   width: 40%;
@@ -731,18 +730,19 @@ transition: all 0.3s ease-in-out 0s;
 -o-transition: all 0.3s ease-in-out 0s;
 }
 .services-item > .services-content > h3 {
-font-size: 32px;
+font-size: 5vh;
 font-weight: 600;
 line-height: 36px;
 color: red;
 }
 .services-item > .services-content > .underline-heading {
-width: 100%;
-height: 20px;
-background-color: white;
+  margin: 10px auto;
+  width: 85%;
+  /* height: 20px; */
+  background-color: white;
 }
 .services-item > .services-content > p {
-font-size:16px;
+font-size:2vh;
 color:white;
 font-weight: 400;
 text-align: justify;
