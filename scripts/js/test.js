@@ -146,93 +146,98 @@ window.addEventListener("card-arrow", function (e) {
 
 function shiftScaleUp(j, section_name) {
     j = j - 1;
-
-    if (section_name == "speakers") {
-        if (j == 0) {
-            for (var i = 1; i < speaker_cards_len; i++) {
-                card = speaker_cards.children[i];
-                card.classList.add('shiftCardRight90');
+    
+    if(screen.width >= 768 && screen.width <= 1024){
+        console.log("hello");
+    }
+    else {
+        if (section_name == "speakers") {
+            if (j == 0) {
+                for (var i = 1; i < speaker_cards_len; i++) {
+                    card = speaker_cards.children[i];
+                    card.classList.add('shiftCardRight90');
+                }
+            } else if (j == (speaker_cards_len - 1)) {
+                for (var i = 0; i < (speaker_cards_len - 1); i++) {
+                    card = speaker_cards.children[i];
+                    card.classList.add('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = speaker_cards.children[i];
+                    card.classList.add('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
+                    var card = speaker_cards.children[i];
+                    card.classList.add('shiftCardRight50');
+                }
             }
-        } else if (j == (speaker_cards_len - 1)) {
-            for (var i = 0; i < (speaker_cards_len - 1); i++) {
-                card = speaker_cards.children[i];
-                card.classList.add('shiftCardLeft90');
+        } else if (section_name == "executives") {
+            if (j == 0) {
+                for (var i = 1; i < exec_cards_len; i++) {
+                    card = exec_cards.children[i];
+                    card.classList.add('shiftCardRight90');
+                }
+            } else if (j == (exec_cards_len - 1)) {
+                for (var i = 0; i < (exec_cards_len - 1); i++) {
+                    card = exec_cards.children[i];
+                    card.classList.add('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = exec_cards.children[i];
+                    card.classList.add('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
+                    var card = exec_cards.children[i];
+                    card.classList.add('shiftCardRight50');
+                }
             }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = speaker_cards.children[i];
-                card.classList.add('shiftCardLeft50');
+        } else if (section_name == "sponsors") {
+            if (j == 0) {
+                for (var i = 1; i < spons_cards_len; i++) {
+                    card = spons_cards.children[i];
+                    card.classList.add('shiftCardRight90');
+                }
+            } else if (j == (spons_cards_len - 1)) {
+                for (var i = 0; i < (spons_cards_len - 1); i++) {
+                    card = spons_cards.children[i];
+                    card.classList.add('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = spons_cards.children[i];
+                    card.classList.add('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
+                    var card = spons_cards.children[i];
+                    card.classList.add('shiftCardRight50');
+                }
             }
-
-            for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
-                var card = speaker_cards.children[i];
-                card.classList.add('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "executives") {
-        if (j == 0) {
-            for (var i = 1; i < exec_cards_len; i++) {
-                card = exec_cards.children[i];
-                card.classList.add('shiftCardRight90');
-            }
-        } else if (j == (exec_cards_len - 1)) {
-            for (var i = 0; i < (exec_cards_len - 1); i++) {
-                card = exec_cards.children[i];
-                card.classList.add('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = exec_cards.children[i];
-                card.classList.add('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
-                var card = exec_cards.children[i];
-                card.classList.add('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "sponsors") {
-        if (j == 0) {
-            for (var i = 1; i < spons_cards_len; i++) {
-                card = spons_cards.children[i];
-                card.classList.add('shiftCardRight90');
-            }
-        } else if (j == (spons_cards_len - 1)) {
-            for (var i = 0; i < (spons_cards_len - 1); i++) {
-                card = spons_cards.children[i];
-                card.classList.add('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = spons_cards.children[i];
-                card.classList.add('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
-                var card = spons_cards.children[i];
-                card.classList.add('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "archive") {
-        if (j == 0) {
-            for (var i = 1; i < archive_cards_len; i++) {
-                card = archive_cards.children[i];
-                card.classList.add('shiftCardRight90');
-            }
-        } else if (j == (archive_cards_len - 1)) {
-            for (var i = 0; i < (archive_cards_len - 1); i++) {
-                card = archive_cards.children[i];
-                card.classList.add('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = archive_cards.children[i];
-                card.classList.add('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
-                var card = archive_cards.children[i];
-                card.classList.add('shiftCardRight50');
+        } else if (section_name == "archive") {
+            if (j == 0) {
+                for (var i = 1; i < archive_cards_len; i++) {
+                    card = archive_cards.children[i];
+                    card.classList.add('shiftCardRight90');
+                }
+            } else if (j == (archive_cards_len - 1)) {
+                for (var i = 0; i < (archive_cards_len - 1); i++) {
+                    card = archive_cards.children[i];
+                    card.classList.add('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = archive_cards.children[i];
+                    card.classList.add('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
+                    var card = archive_cards.children[i];
+                    card.classList.add('shiftCardRight50');
+                }
             }
         }
     }
@@ -241,95 +246,100 @@ function shiftScaleUp(j, section_name) {
 function shiftScaleDown(j, section_name) {
     j = j - 1;
 
-    if (section_name == "speakers") {
-        if (j == 0) {
-            for (var i = 1; i < speaker_cards_len; i++) {
-                card = speaker_cards.children[i];
-                card.classList.remove('shiftCardRight90');
+    if(screen.width >= 768 && screen.width<=1024 && screen.orientation.angle == 90){
+        console.log("bye");
+    } else {
+        if (section_name == "speakers") {
+            if (j == 0) {
+                for (var i = 1; i < speaker_cards_len; i++) {
+                    card = speaker_cards.children[i];
+                    card.classList.remove('shiftCardRight90');
+                }
+            } else if (j == (speaker_cards_len - 1)) {
+                for (var i = 0; i < (speaker_cards_len - 1); i++) {
+                    card = speaker_cards.children[i];
+                    card.classList.remove('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = speaker_cards.children[i];
+                    card.classList.remove('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
+                    var card = speaker_cards.children[i];
+                    card.classList.remove('shiftCardRight50');
+                }
             }
-        } else if (j == (speaker_cards_len - 1)) {
-            for (var i = 0; i < (speaker_cards_len - 1); i++) {
-                card = speaker_cards.children[i];
-                card.classList.remove('shiftCardLeft90');
+        } else if (section_name == "executives") {
+            if (j == 0) {
+                for (var i = 1; i < exec_cards_len; i++) {
+                    card = exec_cards.children[i];
+                    card.classList.remove('shiftCardRight90');
+                }
+            } else if (j == (exec_cards_len - 1)) {
+                for (var i = 0; i < (exec_cards_len - 1); i++) {
+                    card = exec_cards.children[i];
+                    card.classList.remove('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = exec_cards.children[i];
+                    card.classList.remove('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
+                    var card = exec_cards.children[i];
+                    card.classList.remove('shiftCardRight50');
+                }
             }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = speaker_cards.children[i];
-                card.classList.remove('shiftCardLeft50');
+        } else if (section_name == "sponsors") {
+            if (j == 0) {
+                for (var i = 1; i < spons_cards_len; i++) {
+                    card = spons_cards.children[i];
+                    card.classList.remove('shiftCardRight90');
+                }
+            } else if (j == (spons_cards_len - 1)) {
+                for (var i = 0; i < (spons_cards_len - 1); i++) {
+                    card = spons_cards.children[i];
+                    card.classList.remove('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = spons_cards.children[i];
+                    card.classList.remove('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
+                    var card = spons_cards.children[i];
+                    card.classList.remove('shiftCardRight50');
+                }
             }
-
-            for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
-                var card = speaker_cards.children[i];
-                card.classList.remove('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "executives") {
-        if (j == 0) {
-            for (var i = 1; i < exec_cards_len; i++) {
-                card = exec_cards.children[i];
-                card.classList.remove('shiftCardRight90');
-            }
-        } else if (j == (exec_cards_len - 1)) {
-            for (var i = 0; i < (exec_cards_len - 1); i++) {
-                card = exec_cards.children[i];
-                card.classList.remove('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = exec_cards.children[i];
-                card.classList.remove('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
-                var card = exec_cards.children[i];
-                card.classList.remove('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "sponsors") {
-        if (j == 0) {
-            for (var i = 1; i < spons_cards_len; i++) {
-                card = spons_cards.children[i];
-                card.classList.remove('shiftCardRight90');
-            }
-        } else if (j == (spons_cards_len - 1)) {
-            for (var i = 0; i < (spons_cards_len - 1); i++) {
-                card = spons_cards.children[i];
-                card.classList.remove('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = spons_cards.children[i];
-                card.classList.remove('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
-                var card = spons_cards.children[i];
-                card.classList.remove('shiftCardRight50');
-            }
-        }
-    } else if (section_name == "archive") {
-        if (j == 0) {
-            for (var i = 1; i < archive_cards_len; i++) {
-                card = archive_cards.children[i];
-                card.classList.remove('shiftCardRight90');
-            }
-        } else if (j == (archive_cards_len - 1)) {
-            for (var i = 0; i < (archive_cards_len - 1); i++) {
-                card = archive_cards.children[i];
-                card.classList.remove('shiftCardLeft90');
-            }
-        } else {
-            for (var i = 0; i < j; i++) {
-                var card = archive_cards.children[i];
-                card.classList.remove('shiftCardLeft50');
-            }
-
-            for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
-                var card = archive_cards.children[i];
-                card.classList.remove('shiftCardRight50');
+        } else if (section_name == "archive") {
+            if (j == 0) {
+                for (var i = 1; i < archive_cards_len; i++) {
+                    card = archive_cards.children[i];
+                    card.classList.remove('shiftCardRight90');
+                }
+            } else if (j == (archive_cards_len - 1)) {
+                for (var i = 0; i < (archive_cards_len - 1); i++) {
+                    card = archive_cards.children[i];
+                    card.classList.remove('shiftCardLeft90');
+                }
+            } else {
+                for (var i = 0; i < j; i++) {
+                    var card = archive_cards.children[i];
+                    card.classList.remove('shiftCardLeft50');
+                }
+    
+                for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
+                    var card = archive_cards.children[i];
+                    card.classList.remove('shiftCardRight50');
+                }
             }
         }
     }
+    
 }
 
 
@@ -354,8 +364,13 @@ function generate(j, type) {
 
         image[0].srcset = speaker["picture"];
 
-        speaker_info.classList.remove('pull-animation');
-        speaker_info.classList.add('drop-animation');
+        if(screen.width >= 768 && screen.width <= 1024){
+            console.log("Display Stuff");
+        } else {
+            speaker_info.classList.remove('pull-animation');
+            speaker_info.classList.add('drop-animation');
+        }
+        
         // speaker_info.style.display = "flex";
     } else if (type == "executives") {
         var executive = executives_data[j];
@@ -381,8 +396,12 @@ function generate(j, type) {
         image[0].srcset = executive["picture"];
         console.log(executive["picture"]);
 
-        executive_info.classList.remove('pull-animation');
-        executive_info.classList.add('drop-animation');
+        // if(screen.width >= 768 && screen.width <= 1024){
+        //     console.log("Display Stuff");
+        // } else {
+            executive_info.classList.remove('pull-animation');
+            executive_info.classList.add('drop-animation');
+        // }
         // executive_info.style.display = "flex";
     } else if (type == "archives") {
         var archive = archives_data[j];
@@ -391,13 +410,22 @@ function generate(j, type) {
         console.log(archive["link"]);
         video.src = archive["link"];
 
-        archive_info.style.display = "block";
+        if(screen.width >= 768 && screen.width <= 1024){
+            console.log("Display Stuff");
+        } else {
+            archive_info.style.display = "block";
+        }
     }
 }
 
 $("#close-btn-speakers").click(e => {
-    speaker_info.classList.add('pull-animation');
-    speaker_info.classList.remove('drop-animation');
+
+    if(screen.width >= 768 && screen.width <= 1024){
+        console.log("Close Stuff");
+    } else {
+        speaker_info.classList.add('pull-animation');
+        speaker_info.classList.remove('drop-animation');
+    }
     // speaker_info.style.display = "none";
 });
 $("#close-btn-executives").click(e => {

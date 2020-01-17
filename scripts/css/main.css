@@ -315,10 +315,10 @@ figure:hover div {
 .right-button > #right-bottom{
     transform: rotate(-45deg) translate(-45%, 50%);
 }
-#speakers .left-arrow{
+#speakers .left-arrow, #sponsors .left-arrow{
 	display: none;
 }
-#speakers .right-arrow{
+#speakers .right-arrow, #sponsors .right-arrow{
 	display: none;
 }
 .cards{
@@ -333,7 +333,7 @@ figure:hover div {
     overflow-y: hidden; */
     justify-content: flex-start;
 }
-#speakers .cards{
+#speakers .cards, #sponsors .cards{
 	margin: 0 auto;
 	width: 90%;
     height: 350px;
