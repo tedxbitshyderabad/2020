@@ -91,16 +91,16 @@ function loadJSON(filename, callback) {
     var speakers_file = new XMLHttpRequest();
     speakers_file.overrideMimeType("application/json");
     speakers_file.open("GET", filename, true);
-    console.log("Opening File");
+    // console.log("Opening File");
     speakers_file.onreadystatechange = function () {
-        console.log("File is ready");
+        // console.log("File is ready");
         if (speakers_file.readyState == 4 && (speakers_file.status == 200 || speakers_file.status == 0)) {
-            console.log("Sending Callback");
+            // console.log("Sending Callback");
             callback(speakers_file.responseText);
         }
     }
     speakers_file.send(null);
-    console.log("Done");
+    // console.log("Done");
 }
 
 window.onload = function () {
@@ -123,7 +123,7 @@ window.onload = function () {
         for (var i in data) {
             // console.log(data[1]);
             // console.log(data[i].name);
-            console.log(data[i].picture_loc);
+            // console.log(data[i].picture_loc);
             executives_data.push(new Executive(data[i].name, data[i].lead, data[i].write_up, data[i].facebook, data[i].insta, data[i].linkedin, data[i].picture_loc));
         }
     });
@@ -141,7 +141,7 @@ window.onload = function () {
 }
 
 window.addEventListener("card-arrow", function (e) {
-    console.log("Hello");
+    // console.log("Hello");
 });
 
 function shiftScaleUp(j, section_name) {
@@ -344,13 +344,13 @@ function generate(j, type) {
         var image = speaker_info.children[1].children;
 
         text[0].innerHTML = speaker["name"];
-        console.log(speaker["name"]);
+        // console.log(speaker["name"]);
         text[1].innerHTML = speaker["occupation"];
-        console.log(speaker["occupation"]);
+        // console.log(speaker["occupation"]);
         text[2].innerText = speaker["talk"];
-        console.log(speaker["talk"]);
+        // console.log(speaker["talk"]);
         text[3].innerText = speaker["write_up"];
-        console.log(speaker["write_up"]);
+        // console.log(speaker["write_up"]);
 
         image[0].srcset = speaker["picture"];
 
@@ -365,21 +365,25 @@ function generate(j, type) {
         var social = executive_info.children[0].children[0].children[3];
 
         text[0].innerHTML = executive["name"];
-        console.log(executive["name"]);
+        // console.log(executive["name"]);
         text[1].innerHTML = executive["post"];
-        console.log(executive["post"]);
+        // console.log(executive["post"]);
         text[2].innerText = executive["write_up"];
-        console.log(executive["write_up"]);
+        // console.log(executive["write_up"]);
 
         social.children[0].children[0].href = executive["lin"];
-        console.log(executive["lin"]);
+        // console.log(executive["lin"]);
         social.children[1].children[0].href = executive["insta"];
-        console.log(executive["insta"]);
+        // console.log(executive["insta"]);
         social.children[2].children[0].href = executive["fb"];
-        console.log(executive["fb"]);
+        // console.log(executive["fb"]);
 
         image[0].srcset = executive["picture"];
-        console.log(executive["picture"]);
+        // console.log(executive["picture"]);
+
+        if(j == 9 || j == 10){
+            executive_info.children[1].children[1].style.background = "radial-gradient(circle at 55%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 70%)";
+        }
 
         executive_info.classList.remove('pull-animation');
         executive_info.classList.add('drop-animation');
@@ -388,7 +392,7 @@ function generate(j, type) {
         var archive = archives_data[j];
         var video = archive_info.children[0].children[0];
 
-        console.log(archive["link"]);
+        // console.log(archive["link"]);
         video.src = archive["link"];
 
         archive_info.style.display = "block";
@@ -401,6 +405,9 @@ $("#close-btn-speakers").click(e => {
     // speaker_info.style.display = "none";
 });
 $("#close-btn-executives").click(e => {
+    // if(j == 9 || j == 10){
+    //     executive_info.children[1].children[1].style.background = "none";
+    // }
     executive_info.classList.add('pull-animation');
     executive_info.classList.remove('drop-animation');
     // executive_info.style.display = "none";
@@ -438,13 +445,13 @@ let pushedBy_ar = 0;
 // document.getElementsByClassName("section")[i].children[1].children[1].clientWidth / 395
 // document.getElementsByClassName("left-button")[i].parentElement.parentElement.parentElement.id
 $(".left-button").on('click', function(){
-    console.log($(this));
-    console.log($(this).parent().parent().parent().attr('id'));
+    // console.log($(this));
+    // console.log($(this).parent().parent().parent().attr('id'));
     var section = $(this).parent().parent().parent().attr('id');
-    console.log($('#' + section));
-    console.log($('#' + section).children(".real-content").children(".cards"));
+    // console.log($('#' + section));
+    // console.log($('#' + section).children(".real-content").children(".cards"));
     var cards = $('#' + section).children(".real-content").children(".cards");
-    console.log(cards);
+    // console.log(cards);
     var sectionWidth = cards.innerWidth();
     var noOfCards = Math.floor(sectionWidth / cardWidth);
     var noOfActualCards = 0;
@@ -478,7 +485,7 @@ $(".left-button").on('click', function(){
     }
     var num = noOfActualCards - noOfCards;
     if(counter > 1){
-        console.log(counter);
+        // console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
         pushedBy -= 395;
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
@@ -506,7 +513,7 @@ $(".left-button").on('click', function(){
             }
         }
     } else if(counter == 1 || counter == num){
-        console.log(counter);
+        // console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
         pushedBy -= (margin + 395);
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
@@ -564,15 +571,15 @@ $(".left-button").on('click', function(){
     // }
 });
 $(".right-button").on('click', function(){
-    console.log($(this));
-    console.log($(this).parent().parent().parent().attr('id'));
+    // console.log($(this));
+    // console.log($(this).parent().parent().parent().attr('id'));
     var section = $(this).parent().parent().parent().attr('id');
-    console.log($('#' + section));
-    console.log($('#' + section).children(".real-content").children(".cards"));
+    // console.log($('#' + section));
+    // console.log($('#' + section).children(".real-content").children(".cards"));
     var cards = $('#' + section).children(".real-content").children(".cards");
     var sectionWidth = cards.innerWidth();
     var noOfCards = Math.floor(sectionWidth / cardWidth);
-    console.log(noOfCards);
+    // console.log(noOfCards);
     var noOfActualCards = 0;
     var counter = 0;
     var pushedBy = 0;
@@ -604,7 +611,7 @@ $(".right-button").on('click', function(){
     }
     var num = noOfActualCards - noOfCards;
     if(counter == 0){
-        console.log(counter);
+        // console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
         pushedBy += (margin + 395);
         cards.css("transform", 'translateX(-'+pushedBy+'px)');
@@ -632,7 +639,7 @@ $(".right-button").on('click', function(){
             }
         }
     } else if(counter < num){
-        console.log(counter);
+        // console.log(counter);
         cards.css("transition", "transform 0.4s ease-in-out");
         pushedBy += 395;
         cards.css("transform", 'translateX(-'+pushedBy+'px)');

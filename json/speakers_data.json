@@ -9,7 +9,7 @@
             "insta" : "#",
             "linkedin" : "#",
             "twitter" : "#", 
-            "picture_loc" : "./media/speakers/ted1.jpg"
+            "picture_loc" : "./media/speakers/neville.png"
         },
         {
             "name" : "Ankit Mehrotra", 
@@ -20,7 +20,7 @@
             "insta" : "#",
             "linkedin" : "#",
             "twitter" : "#", 
-            "picture_loc" : "./media/speakers/ted2.jpg"
+            "picture_loc" : "./media/speakers/ankit.png"
         },
         {
             "name" : "Speaker Three", 

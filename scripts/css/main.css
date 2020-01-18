@@ -90,6 +90,7 @@ height: 100%;
 position: absolute;
 box-sizing: border-box;
 border: 3px solid #e62b1e;
+border: 3px solid #000;
 line-height: 3.5vh;
 font-weight: 600;
 text-align: center;
@@ -99,12 +100,15 @@ font-family: 'Poppins', sans-serif;
 }
 .btn-text:nth-child(1) {
 color: red;
+color: black;
 transform: translate3d(0, 0, 20px);
 -webkit-transform: translate3d(0, 0, 20px);
 }
 .btn-text:nth-child(2) {
 color: #fff;
 background: red;
+color: black;
+background: black;
 transform: rotateX(90deg) translate3d(0, 0, 20px);
 -webkit-transform: rotateX(90deg) translate3d(0, 0, 20px);
 }
@@ -143,14 +147,15 @@ transform: rotateX(90deg) translate3d(0, 0, 20px);
 }
 .theme-name-div{
   width: 60%;
-  height: 50%;
+  height: 60%;
   position: relative;
   color: rgb(255, 0, 0);
   margin: 0 0 0 10%;
 }
 .theme-name{
-  /* width: 50%;
-  height: 50%; */
+  width: 40%;
+  height: 50%;
+  margin: 0 0 7% 0;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -158,11 +163,15 @@ transform: rotateX(90deg) translate3d(0, 0, 20px);
   text-align: left;
   font-weight: 800;
 }
+.theme-name > img{
+  width: 100%;
+  height: 100%;
+}
 .theme-expl-div{
   width: 60%;
   height: 40%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
   color: rgb(255, 255, 255);
   margin: 0 0 0 10%;
@@ -331,11 +340,11 @@ display: none;
   justify-content: flex-start;
 }
 #speakers .cards, #sponsors .cards{
-margin: 0 auto;
-width: 90%;
+  margin: 0 auto;
+  width: 90%;
   height: 350px;
-white-space: nowrap;
-display: flex;
+  white-space: nowrap;
+  display: flex;
   justify-content: space-evenly;
 }
 .cards::-webkit-scrollbar {
@@ -353,6 +362,7 @@ display: flex;
   transform: scale(1);
   z-index: 1;
   border: 0px solid white;
+  box-shadow: 0 0 2px 0 white;
   opacity: 1;
   transition: transform 1s, z-index 1s, opacity 1s;
   transition-delay: 0.2s;
@@ -366,6 +376,7 @@ display: flex;
   transform: scale(1);
   z-index: 1;
   border: 0px solid white;
+  box-shadow: 0 0 2px 0 white;
   opacity: 1;
   transform-origin: center left;
   transition: transform 1s, z-index 1s, opacity 1s, width 1s, height 1s;
@@ -380,6 +391,7 @@ display: flex;
   transform: scale(1);
   z-index: 1;
   border: 0px solid white;
+  box-shadow: 0 0 2px 0 white;
   opacity: 1;
   transform-origin: center right;
   transition: transform 1s, z-index 1s, opacity 1s;
@@ -441,7 +453,7 @@ display: flex;
   cursor: pointer;
 }
 .card-arrow > h2{
-  margin: 0 0 10px 0;
+  margin: 0 1vw 1vh 0;
 }
 .card:hover{
   transform: scale(1.35);
@@ -551,7 +563,7 @@ font-size: 35px;
 .write-up{
   width: 80%;
   margin: 0 auto;
-  font-size: 1.7vh;
+  font-size: 1.5vh;
   font-weight: 400; /* Helvetica Regular 5pt */
   white-space: pre-wrap;
 }
@@ -571,6 +583,9 @@ font-size: 3vh;
 #executives > .people-info > .info > .info-placer > .people-social-handles{
 font-size: 30px;
 }
+#speakers .people-social-handles{
+	display: none;
+}
 .people-social-handles > li{
   list-style: none;
   margin: auto;
@@ -583,13 +598,14 @@ font-size: 30px;
   position: relative;
 }
 .pic > img {
-  width: 100%;
+  width: 120%;
   height: 100%;
   position: absolute;
   right: 0;
+  z-index: -1;
 }
 #executives > .people-info > .pic > img {
-width: 120%;
+width: 100%;
 height: 100%;
 position: absolute;
 right: 0;
@@ -610,12 +626,12 @@ width: 110%;
   height: 100%;
   position: absolute;
   background: radial-gradient(
-      circle at 100%, 
+      circle at 55%, 
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1) 90%
+      rgba(0, 0, 0, 1) 70%
   );
-  background: none;
-  left: -10%;
+  /* background: none; */
+  /* left: -10%; */
 }
 .pic > .close-button{
   width: 10%;
@@ -632,6 +648,7 @@ width: 110%;
   position: absolute;
   top: 45%;
   left: 20%;
+  background-color: rgba(255,0,0,0.7);
 }
 #executives >.people-info > .pic > .close-button > .line{
 background-color: rgba(255,0,0,0.7);
@@ -742,7 +759,7 @@ color: red;
   background-color: white;
 }
 .services-item > .services-content > p {
-font-size:2vh;
+font-size:1.8vh;
 color:white;
 font-weight: 400;
 text-align: justify;
@@ -999,7 +1016,7 @@ color: #fff;
 background: #3B5998;
 }
 .footer-area .footer-social li .twitter:hover {
-background: #00aced;
+background: #00ACED;
 }
 .footer-area .footer-social li .instagram:hover {
 background: #E4405F;

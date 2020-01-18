@@ -19,41 +19,22 @@
             "picture_loc" : "./media/executives/co_licensee.jpg"
         },
         {
-            "name" : "Saransh Agarwal", 
-            "lead" : "Sponsorship Head", 
-            "write_up" : "Assiduous. Curious. Hustler. ", 
-            "facebook" : "https://m.facebook.com/saranshagarwal0407", 
-            "insta" : "https://www.instagram.com/asaransh/", 
-            "linkedin" : "https://www.linkedin.com/in/saransh-0407", 
-            "picture_loc" : "./media/speakers/ted1.jpg"
-        },
-        {
             "name" : "Rahul Panjwani", 
             "lead" : "Curator", 
-            "write_up" : "A write up for everyone.", 
-            "facebook" : "#", 
-            "insta" : "#", 
-            "linkedin" : "#", 
-            "twitter" : "#", 
+            "write_up" : "Rebel. Demotional. Jugaadu. ", 
+            "facebook" : "https://www.facebook.com/profile.php?id=100017323215435", 
+            "insta" : "https://www.instagram.com/rahulpanjwani508/", 
+            "linkedin" : "https://www.linkedin.com/in/rahul-panjwani/", 
             "picture_loc" : "./media/executives/curator.jpg"
         },
         {
             "name" : "Suhani Gupta", 
             "lead" : "Speaker Research Head", 
             "write_up" : "A write up for everyone.", 
-            "facebook" : "#", 
-            "insta" : "#", 
-            "linkedin" : "#", 
+            "facebook" : "https://www.facebook.com/suhani.gupta.568", 
+            "insta" : "https://instagram.com/suhanigupta?igshid=xl78i18ihzbq", 
+            "linkedin" : "http://linkedin.com/in/suhani-gupta-96491a171", 
             "picture_loc" : "./media/executives/speaker_research.jpg"
-        },
-        {
-            "name" : "Soumyadeep Basu", 
-            "lead" : "Multimedia Head", 
-            "write_up" : "Observant. Passionate. Meticulous. ", 
-            "facebook" : "https://www.facebook.com/soumyadeep.basu.14", 
-            "insta" : "https://instagram.com/soumyadeep.basu033?igshid=fzr2cqe6mno3", 
-            "linkedin" : "https://www.linkedin.com/in/soumyadeep-basu-309ba2184", 
-            "picture_loc" : "./media/speakers/ted1.jpg"
         },
         {
             "name" : "Karthik Rangasai Sivaraman", 
@@ -90,6 +71,24 @@
             "insta" : "https://www.instagram.com/ritul.__.tripathi/", 
             "linkedin" : "https://www.linkedin.com/in/ritul-tripathi-7950681a0/", 
             "picture_loc" : "./media/executives/design.jpg"
+        },
+        {
+            "name" : "Saransh Agarwal", 
+            "lead" : "Sponsorship Head", 
+            "write_up" : "Assiduous. Curious. Hustler. ", 
+            "facebook" : "https://m.facebook.com/saranshagarwal0407", 
+            "insta" : "https://www.instagram.com/asaransh/", 
+            "linkedin" : "https://www.linkedin.com/in/saransh-0407", 
+            "picture_loc" : "./media/executives/sponsorship.png"
+        },
+        {
+            "name" : "Soumyadeep Basu", 
+            "lead" : "Multimedia Head", 
+            "write_up" : "Observant. Passionate. Meticulous. ", 
+            "facebook" : "https://www.facebook.com/soumyadeep.basu.14", 
+            "insta" : "https://instagram.com/soumyadeep.basu033?igshid=fzr2cqe6mno3", 
+            "linkedin" : "https://www.linkedin.com/in/soumyadeep-basu-309ba2184", 
+            "picture_loc" : "./media/executives/multimedia.jpg"
         }
     ]
 }
