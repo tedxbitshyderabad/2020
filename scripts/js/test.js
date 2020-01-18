@@ -2,6 +2,8 @@ var speaker_info = document.getElementById("speakers-info");
 var executive_info = document.getElementById("executives-info");
 var archive_info = document.getElementById("archives-info");
 
+
+
 // SPEAKER VARIABLES
 var speaker_cards = document.getElementById("speakers");
 speaker_cards = speaker_cards.children[1].children[1];
@@ -396,12 +398,20 @@ function generate(j, type) {
         image[0].srcset = executive["picture"];
         console.log(executive["picture"]);
 
-        // if(screen.width >= 768 && screen.width <= 1024){
+         if(screen.width >= 1024){
         //     console.log("Display Stuff");
         // } else {
             executive_info.classList.remove('pull-animation');
             executive_info.classList.add('drop-animation');
-        // }
+         }
+         else{
+             // Modal code,to get modal
+             console.log("Done?");
+             document.getElementsByClassName('container')[0].classList.add('modal');
+             executive_info.classList.add('modal-content');
+             console.log("Done......");
+             document.getElementsByClassName('modal')[0].style.display="block"; 
+         }
         // executive_info.style.display = "flex";
     } else if (type == "archives") {
         var archive = archives_data[j];
@@ -417,6 +427,15 @@ function generate(j, type) {
         }
     }
 }
+// Modal code, to close the modal
+window.onclick = function(event) {
+    if (event.target == document.getElementsByClassName('container')[0]) {
+        console.log("Done");
+    document.getElementsByClassName('container')[0].classList.remove('modal');
+    executive_info.classList.remove('modal-content');
+    }
+  }
+ 
 
 $("#close-btn-speakers").click(e => {
 
@@ -851,3 +870,37 @@ $(".right-button").on('click', function(){
 //     }
 
 // })
+
+// MOBILES AND TABS
+//if(screen.availWidth<=1024){
+  //document.getElementById('Tickets').innerHTML="Get Tickets";
+// Get the modal
+//var modal = document.querySelectorAll(".card-details");
+
+// Get the button that opens the modal
+//var btn = document.querySelectorAll(".card-details");
+
+// Get the <span> element that closes the modal
+//var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+//btn.forEach((e)=> {
+  
+  //e.addEventListener("touchstart",()=>{ 
+    //console.log("hi");  
+    //modal.style.display = "block";
+//})})
+
+// When the user clicks on <span> (x), close the modal
+//span.onclick = function() {
+  //modal.style.display = "none";
+//}
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+  //if (event.target == modal) {
+    //modal.style.display = "none";
+ // }
+//}
+  
+//}
