@@ -981,5 +981,287 @@ else if(screen.width >= 768 && screen.width <=1024){
 		archive_info.children[0].children[0].src = "";
 		archive_info.style.display = "none";
 	});
+} 
+// Mobile View
+else if(screen.width < 768){
+
+	function shiftScaleUp(j, section_name) {
+		j = j - 1;
+	
+		if (section_name == "speakers") {
+			console.log("Hello");
+			// generate(j, section_name);
+			// if (j == 0) {
+			// 	for (var i = 1; i < speaker_cards_len; i++) {
+			// 		card = speaker_cards.children[i];
+			// 		card.classList.add('shiftCardRight90');
+			// 	}
+			// } else if (j == (speaker_cards_len - 1)) {
+			// 	for (var i = 0; i < (speaker_cards_len - 1); i++) {
+			// 		card = speaker_cards.children[i];
+			// 		card.classList.add('shiftCardLeft90');
+			// 	}
+			// } else {
+			// 	for (var i = 0; i < j; i++) {
+			// 		var card = speaker_cards.children[i];
+			// 		card.classList.add('shiftCardLeft50');
+			// 	}
+	
+			// 	for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
+			// 		var card = speaker_cards.children[i];
+			// 		card.classList.add('shiftCardRight50');
+			// 	}
+			// }
+		} else if (section_name == "executives") {
+			console.log("Hello");
+			// generate(j, section_name);
+			// if (j == 0) {
+			// 	for (var i = 1; i < exec_cards_len; i++) {
+			// 		card = exec_cards.children[i];
+			// 		card.classList.add('shiftCardRight90');
+			// 	}
+			// } else if (j == (exec_cards_len - 1)) {
+			// 	for (var i = 0; i < (exec_cards_len - 1); i++) {
+			// 		card = exec_cards.children[i];
+			// 		card.classList.add('shiftCardLeft90');
+			// 	}
+			// } else {
+			// 	for (var i = 0; i < j; i++) {
+			// 		var card = exec_cards.children[i];
+			// 		card.classList.add('shiftCardLeft50');
+			// 	}
+	
+			// 	for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
+			// 		var card = exec_cards.children[i];
+			// 		card.classList.add('shiftCardRight50');
+			// 	}
+			// }
+		} else if (section_name == "sponsors") {
+			if (j == 0) {
+				for (var i = 1; i < spons_cards_len; i++) {
+					card = spons_cards.children[i];
+					card.classList.add('shiftCardRight90');
+				}
+			} else if (j == (spons_cards_len - 1)) {
+				for (var i = 0; i < (spons_cards_len - 1); i++) {
+					card = spons_cards.children[i];
+					card.classList.add('shiftCardLeft90');
+				}
+			} else {
+				for (var i = 0; i < j; i++) {
+					var card = spons_cards.children[i];
+					card.classList.add('shiftCardLeft50');
+				}
+	
+				for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
+					var card = spons_cards.children[i];
+					card.classList.add('shiftCardRight50');
+				}
+			}
+		} else if (section_name == "archive") {
+			if (j == 0) {
+				for (var i = 1; i < archive_cards_len; i++) {
+					card = archive_cards.children[i];
+					card.classList.add('shiftCardRight90');
+				}
+			} else if (j == (archive_cards_len - 1)) {
+				for (var i = 0; i < (archive_cards_len - 1); i++) {
+					card = archive_cards.children[i];
+					card.classList.add('shiftCardLeft90');
+				}
+			} else {
+				for (var i = 0; i < j; i++) {
+					var card = archive_cards.children[i];
+					card.classList.add('shiftCardLeft50');
+				}
+	
+				for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
+					var card = archive_cards.children[i];
+					card.classList.add('shiftCardRight50');
+				}
+			}
+		}
+	}
+	
+	function shiftScaleDown(j, section_name) {
+		j = j - 1;
+	
+		if (section_name == "speakers") {
+			console.log("Hello");
+			// if (j == 0) {
+			// 	for (var i = 1; i < speaker_cards_len; i++) {
+			// 		card = speaker_cards.children[i];
+			// 		card.classList.remove('shiftCardRight90');
+			// 	}
+			// } else if (j == (speaker_cards_len - 1)) {
+			// 	for (var i = 0; i < (speaker_cards_len - 1); i++) {
+			// 		card = speaker_cards.children[i];
+			// 		card.classList.remove('shiftCardLeft90');
+			// 	}
+			// } else {
+			// 	for (var i = 0; i < j; i++) {
+			// 		var card = speaker_cards.children[i];
+			// 		card.classList.remove('shiftCardLeft50');
+			// 	}
+	
+			// 	for (var i = (j + 1); i < speaker_cards.childElementCount; i++) {
+			// 		var card = speaker_cards.children[i];
+			// 		card.classList.remove('shiftCardRight50');
+			// 	}
+			// }
+		} else if (section_name == "executives") {
+			console.log("Hello");
+			// if (j == 0) {
+			// 	for (var i = 1; i < exec_cards_len; i++) {
+			// 		card = exec_cards.children[i];
+			// 		card.classList.remove('shiftCardRight90');
+			// 	}
+			// } else if (j == (exec_cards_len - 1)) {
+			// 	for (var i = 0; i < (exec_cards_len - 1); i++) {
+			// 		card = exec_cards.children[i];
+			// 		card.classList.remove('shiftCardLeft90');
+			// 	}
+			// } else {
+			// 	for (var i = 0; i < j; i++) {
+			// 		var card = exec_cards.children[i];
+			// 		card.classList.remove('shiftCardLeft50');
+			// 	}
+	
+			// 	for (var i = (j + 1); i < exec_cards.childElementCount; i++) {
+			// 		var card = exec_cards.children[i];
+			// 		card.classList.remove('shiftCardRight50');
+			// 	}
+			// }
+		} else if (section_name == "sponsors") {
+			if (j == 0) {
+				for (var i = 1; i < spons_cards_len; i++) {
+					card = spons_cards.children[i];
+					card.classList.remove('shiftCardRight90');
+				}
+			} else if (j == (spons_cards_len - 1)) {
+				for (var i = 0; i < (spons_cards_len - 1); i++) {
+					card = spons_cards.children[i];
+					card.classList.remove('shiftCardLeft90');
+				}
+			} else {
+				for (var i = 0; i < j; i++) {
+					var card = spons_cards.children[i];
+					card.classList.remove('shiftCardLeft50');
+				}
+	
+				for (var i = (j + 1); i < spons_cards.childElementCount; i++) {
+					var card = spons_cards.children[i];
+					card.classList.remove('shiftCardRight50');
+				}
+			}
+		} else if (section_name == "archive") {
+			if (j == 0) {
+				for (var i = 1; i < archive_cards_len; i++) {
+					card = archive_cards.children[i];
+					card.classList.remove('shiftCardRight90');
+				}
+			} else if (j == (archive_cards_len - 1)) {
+				for (var i = 0; i < (archive_cards_len - 1); i++) {
+					card = archive_cards.children[i];
+					card.classList.remove('shiftCardLeft90');
+				}
+			} else {
+				for (var i = 0; i < j; i++) {
+					var card = archive_cards.children[i];
+					card.classList.remove('shiftCardLeft50');
+				}
+	
+				for (var i = (j + 1); i < archive_cards.childElementCount; i++) {
+					var card = archive_cards.children[i];
+					card.classList.remove('shiftCardRight50');
+				}
+			}
+		}
+	}
+	
+	
+	// Write function to change values of speaker-info class div based on button click.
+	function generate(j, type) {
+	
+		j = j - 1;
+	
+		if (type == "speakers") {
+			var speaker = speakers_data[j];
+			var text = speaker_info.children[0].children;
+			var image = speaker_info.children[1].children;
+	
+			text[0].innerHTML = speaker["name"];
+			console.log(speaker["name"]);
+			text[1].innerHTML = speaker["occupation"];
+			// console.log(speaker["occupation"]);
+			text[2].innerText = speaker["talk"];
+			// console.log(speaker["talk"]);
+			text[3].innerText = speaker["write_up"];
+			// console.log(speaker["write_up"]);
+	
+			image[0].srcset = speaker["picture"];
+	
+			// speaker_info.classList.remove('pull-animation');
+			// speaker_info.classList.add('drop-animation');
+			speaker_info.style.display = "flex";
+		} else if (type == "executives") {
+			var executive = executives_data[j];
+			executive_info.children[0].children[0]
+			var text = executive_info.children[0].children[0].children;
+			var image = executive_info.children[1].children;
+			var social = executive_info.children[0].children[0].children[3];
+	
+			text[0].innerHTML = executive["name"];
+			console.log(executive["name"]);
+			text[1].innerHTML = executive["post"];
+			// console.log(executive["post"]);
+			text[2].innerText = executive["write_up"];
+			// console.log(executive["write_up"]);
+	
+			social.children[0].children[0].href = executive["lin"];
+			// console.log(executive["lin"]);
+			social.children[1].children[0].href = executive["insta"];
+			// console.log(executive["insta"]);
+			social.children[2].children[0].href = executive["fb"];
+			// console.log(executive["fb"]);
+	
+			image[0].srcset = executive["picture"];
+			// console.log(executive["picture"]);
+	
+			if(j == 9 || j == 10){
+				executive_info.children[1].children[1].style.background = "radial-gradient(circle at 55%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 70%)";
+			}
+	
+			// executive_info.classList.remove('pull-animation');
+			// executive_info.classList.add('drop-animation');
+			executive_info.style.display = "flex";
+		} else if (type == "archives") {
+			var archive = archives_data[j];
+			var video = archive_info.children[0].children[0];
+	
+			// console.log(archive["link"]);
+			window.open(archive["link"]);
+	
+			// archive_info.style.display = "block";
+		}
+	}
+	
+	$("#close-btn-speakers").click(e => {
+		// speaker_info.classList.add('pull-animation');
+		// speaker_info.classList.remove('drop-animation');
+		speaker_info.style.display = "none";
+	});
+	$("#close-btn-executives").click(e => {
+		// if(j == 9 || j == 10){
+		//     executive_info.children[1].children[1].style.background = "none";
+		// }
+		// executive_info.classList.add('pull-animation');
+		// executive_info.classList.remove('drop-animation');
+		executive_info.style.display = "none";
+	});
+	$("#archives-info").click(e => {
+		archive_info.children[0].children[0].src = "";
+		archive_info.style.display = "none";
+	});
 }
 
