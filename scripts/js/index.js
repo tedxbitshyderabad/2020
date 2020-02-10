@@ -1,3 +1,5 @@
+// window.location.reload("www.tedxbitshyderabad.com");
+
 console.log(document.body.clientHeight);
 console.log(document.body.scrollHeight);
 console.log(document.body.offsetHeight);
@@ -5,8 +7,15 @@ console.log(document.body.offsetHeight);
 var eventDate = new Date(2020, 01, 09);
 var today = new Date();
 var remainingDays = Math.ceil((eventDate - today) / (1000 * 60 * 60 * 24));
-$(".landing-countdown").text(remainingDays + " Days To Go!")
-    // document.getElementsByClassName("landing-countdown")[0].innerText = remainingDays + " Days To Go!";
+if (remainingDays == 1) {
+    $(".landing-countdown").text(remainingDays + " Day To Go!")
+} else if (remainingDays < 0) {
+    $(".landing-countdown").text("9th Febraury 2020")
+} else {
+    $(".landing-countdown").text(remainingDays + " Days To Go!")
+}
+
+// document.getElementsByClassName("landing-countdown")[0].innerText = remainingDays + " Days To Go!";
 
 // console.log(remainingDays);
 
@@ -494,7 +503,7 @@ if (screen.width > 1024) {
     const cardWidth = 375;
 
     // Speakers Variables
-    const noOfSpeakers = 8;
+    const noOfSpeakers = 9;
     let counter_sp = 0;
     let pushedBy_sp = 0;
 
@@ -504,7 +513,7 @@ if (screen.width > 1024) {
     let pushedBy_ex = 0;
 
     // Sponsors Variables
-    const noOfSponsors = 8;
+    const noOfSponsors = 12;
     let counter_spon = 0;
     let pushedBy_spon = 0;
 
@@ -703,7 +712,7 @@ if (screen.width > 1024) {
         }
         var num = noOfActualCards - noOfCards;
         if (counter == 0) {
-            // console.log(counter);
+            console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
             pushedBy += (margin + cardWidth);
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');
@@ -735,7 +744,7 @@ if (screen.width > 1024) {
                     }
             }
         } else if (counter < num) {
-            // console.log(counter);
+            console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
             pushedBy += cardWidth;
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');

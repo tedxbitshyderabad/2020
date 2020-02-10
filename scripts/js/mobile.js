@@ -1,51 +1,3 @@
-console.log(document.body.clientHeight);
-console.log(document.body.scrollHeight);
-console.log(document.body.offsetHeight);
-//  LANDING PART STARTS
-var eventDate = new Date(2020, 01, 09);
-var today = new Date();
-var remainingDays = Math.ceil((eventDate - today) / (1000 * 60 * 60 * 24));
-$(".landing-countdown").text(remainingDays + " Days To Go!")
-    // document.getElementsByClassName("landing-countdown")[0].innerText = remainingDays + " Days To Go!";
-
-// console.log(remainingDays);
-
-var factor = 0;
-
-$(".landing-next-btn-link").click(e => {
-    console.log("Helo");
-    $("body").css("overflow-y", "scroll");
-    $(".landing-next-btn").css("display", "none");
-    $(".days-remaining").css({
-        "animation-delay": "0s",
-        "animation": "fadeOutContent ease 3s"
-    });
-    $(".landing-content").css({
-        "animation-delay": "0.5s",
-        "animation": "fadeOutContent ease 3s"
-    });
-    $(".layer-three").css({
-        "animation-delay": "1s",
-        "animation": "moveDown ease 3s"
-    });
-    $(".layer-two").css({
-        "animation-delay": "1.5s",
-        "animation": "moveDown ease 3s"
-    });
-    $(".building").css({
-        "animation-delay": "2s",
-        "animation": "moveDown ease 3s"
-    });
-    $(".landing-container").css({
-        "animation": "hide ease 3s",
-        "animation-iteration-count": "1",
-        "animation-fill-mode": "forwards",
-        "animation-delay": "2.5s",
-    });
-});
-// LANDING PART ENDS
-
-
 var speaker_info = document.getElementById("speakers-info");
 var executive_info = document.getElementById("executives-info");
 var archive_info = document.getElementById("archives-info");
@@ -392,7 +344,6 @@ if (screen.width > 1024) {
             var speaker = speakers_data[j];
             var text = speaker_info.children[0].children;
             var image = speaker_info.children[1].children;
-            var social = speaker_info.children[0].children[4];
 
             text[0].innerHTML = speaker["name"];
             // console.log(speaker["name"]);
@@ -402,22 +353,6 @@ if (screen.width > 1024) {
             // console.log(speaker["talk"]);
             text[3].innerText = speaker["write_up"];
             // console.log(speaker["write_up"]);
-
-            social.children[0].children[0].href = speaker["lin"];
-            if (speaker["lin"] == "#") {
-                social.children[0].style.display = "none";
-            }
-            // console.log(executive["lin"]);
-            social.children[1].children[0].href = speaker["insta"];
-            if (speaker["insta"] == "#") {
-                social.children[1].style.display = "none";
-            }
-            // console.log(executive["insta"]);
-            social.children[2].children[0].href = speaker["fb"];
-            if (speaker["fb"] == "#") {
-                social.children[2].style.display = "none";
-            }
-            // console.log(executive["fb"]);
 
             image[0].srcset = speaker["picture"];
 
@@ -467,10 +402,6 @@ if (screen.width > 1024) {
     }
 
     $("#close-btn-speakers").click(e => {
-        var social = speaker_info.children[0].children[4];
-        social.children[0].style.display = "block";
-        social.children[1].style.display = "block";
-        social.children[2].style.display = "block";
         speaker_info.classList.add('pull-animation');
         speaker_info.classList.remove('drop-animation');
         // speaker_info.style.display = "none";
@@ -491,7 +422,7 @@ if (screen.width > 1024) {
 
     ///// SCROLL FUNCTIONS /////
     const margin = window.innerWidth * 5 / 100;
-    const cardWidth = 375;
+    const cardWidth = 395;
 
     // Speakers Variables
     const noOfSpeakers = 8;
@@ -560,10 +491,9 @@ if (screen.width > 1024) {
         }
         var num = noOfActualCards - noOfCards;
         if (counter > 1) {
-            console.log(counter);
+            // console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
-            pushedBy -= cardWidth;
-            console.log(pushedBy);
+            pushedBy -= 395;
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');
             counter--;
             switch (section) {
@@ -593,13 +523,9 @@ if (screen.width > 1024) {
                     }
             }
         } else if (counter == 1 || counter == num) {
-            console.log(counter);
+            // console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
-            pushedBy -= (margin + cardWidth);
-            if (pushedBy < 0) {
-                pushedBy = 0;
-            }
-            console.log(pushedBy);
+            pushedBy -= (margin + 395);
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');
             counter--;
             switch (section) {
@@ -705,7 +631,7 @@ if (screen.width > 1024) {
         if (counter == 0) {
             // console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
-            pushedBy += (margin + cardWidth);
+            pushedBy += (margin + 395);
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');
             counter++;
             switch (section) {
@@ -737,7 +663,7 @@ if (screen.width > 1024) {
         } else if (counter < num) {
             // console.log(counter);
             cards.css("transition", "transform 0.4s ease-in-out");
-            pushedBy += cardWidth;
+            pushedBy += 395;
             cards.css("transform", 'translateX(-' + pushedBy + 'px)');
             counter++;
             switch (section) {
@@ -1005,32 +931,15 @@ else if (screen.width >= 768 && screen.width <= 1024) {
             var speaker = speakers_data[j];
             var text = speaker_info.children[0].children;
             var image = speaker_info.children[1].children;
-            var social = speaker_info.children[0].children[4];
 
             text[0].innerHTML = speaker["name"];
-            // console.log(speaker["name"]);
+            console.log(speaker["name"]);
             text[1].innerHTML = speaker["occupation"];
             // console.log(speaker["occupation"]);
             text[2].innerText = speaker["talk"];
             // console.log(speaker["talk"]);
             text[3].innerText = speaker["write_up"];
             // console.log(speaker["write_up"]);
-
-            social.children[0].children[0].href = speaker["lin"];
-            if (speaker["lin"] == "#") {
-                social.children[0].style.display = "none";
-            }
-            // console.log(executive["lin"]);
-            social.children[1].children[0].href = speaker["insta"];
-            if (speaker["insta"] == "#") {
-                social.children[1].style.display = "none";
-            }
-            // console.log(executive["insta"]);
-            social.children[2].children[0].href = speaker["fb"];
-            if (speaker["fb"] == "#") {
-                social.children[2].style.display = "none";
-            }
-            // console.log(executive["fb"]);
 
             image[0].srcset = speaker["picture"];
 
@@ -1080,10 +989,6 @@ else if (screen.width >= 768 && screen.width <= 1024) {
     }
 
     $("#close-btn-speakers").click(e => {
-        var social = speaker_info.children[0].children[4];
-        social.children[0].style.display = "block";
-        social.children[1].style.display = "block";
-        social.children[2].style.display = "block";
         // speaker_info.classList.add('pull-animation');
         // speaker_info.classList.remove('drop-animation');
         speaker_info.style.display = "none";
@@ -1308,32 +1213,15 @@ else if (screen.width < 768) {
             var speaker = speakers_data[j];
             var text = speaker_info.children[0].children;
             var image = speaker_info.children[1].children;
-            var social = speaker_info.children[0].children[4];
 
             text[0].innerHTML = speaker["name"];
-            // console.log(speaker["name"]);
+            console.log(speaker["name"]);
             text[1].innerHTML = speaker["occupation"];
             // console.log(speaker["occupation"]);
             text[2].innerText = speaker["talk"];
             // console.log(speaker["talk"]);
             text[3].innerText = speaker["write_up"];
             // console.log(speaker["write_up"]);
-
-            social.children[0].children[0].href = speaker["lin"];
-            if (speaker["lin"] == "#") {
-                social.children[0].style.display = "none";
-            }
-            // console.log(executive["lin"]);
-            social.children[1].children[0].href = speaker["insta"];
-            if (speaker["insta"] == "#") {
-                social.children[1].style.display = "none";
-            }
-            // console.log(executive["insta"]);
-            social.children[2].children[0].href = speaker["fb"];
-            if (speaker["fb"] == "#") {
-                social.children[2].style.display = "none";
-            }
-            // console.log(executive["fb"]);
 
             image[0].srcset = speaker["picture"];
 
@@ -1383,10 +1271,6 @@ else if (screen.width < 768) {
     }
 
     $("#close-btn-speakers").click(e => {
-        var social = speaker_info.children[0].children[4];
-        social.children[0].style.display = "block";
-        social.children[1].style.display = "block";
-        social.children[2].style.display = "block";
         // speaker_info.classList.add('pull-animation');
         // speaker_info.classList.remove('drop-animation');
         speaker_info.style.display = "none";

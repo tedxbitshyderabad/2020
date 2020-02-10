@@ -355,20 +355,6 @@ float: right; */
     transform: rotate(-45deg) translate(-45%, 50%);
 }
 
-
-/* #speakers .left-arrow, */
-
-#sponsors .left-arrow {
-    display: none;
-}
-
-
-/* #speakers .right-arrow, */
-
-#sponsors .right-arrow {
-    display: none;
-}
-
 .cards {
     width: 90%;
     height: 350px;
@@ -380,15 +366,6 @@ float: right; */
     /* overflow-x: scroll;
 overflow-y: hidden; */
     justify-content: flex-start;
-}
-
-#sponsors .cards {
-    margin: 0 auto;
-    width: 90%;
-    height: 350px;
-    white-space: nowrap;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .cards::-webkit-scrollbar {
@@ -506,7 +483,7 @@ rgba(0,0,0,1) 100%); */
 
 .card-title>h4 {
     margin: 5px 5px 10px 3px;
-    font-size: 1.5vh;
+    font-size: 1.2vh;
 }
 
 .card-arrow {
@@ -630,7 +607,7 @@ rgba(0,0,0,1) 100%); */
 .people-name {
     width: 80%;
     margin: 7% auto 0 auto;
-    font-size: 7vh;
+    font-size: 6vh;
     font-weight: 800;
 }
 

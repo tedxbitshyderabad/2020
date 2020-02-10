@@ -1,6 +1,17 @@
-# website2020
-The official website for the TEDx BITSHyderabad 2020 event
+# 2020
+The website that was built for the TEDx BITSHyderabad 2020.
 
-# TO DO:
-1) Set up a right and left button for scroll navigation in every horizontal section.&nbsp;
-2) Make info div appear when dowm arrow is clicked.&nbsp;
+# Event Date
+9th Febraury 2020
+
+# Executives
+Arnav Jain - Licensee&nbsp;
+Pratik Kakade - Co-Licensee&nbsp;
+Rahul Panjwani - Curation Head&nbsp;
+Sunahi Gupta - Speaker Research Head&nbsp;
+Karthik Rangasai - Technical Team Head&nbsp;
+Dipanshu Khandelwal - Logistics Head&nbsp;
+Shivali Ratra - Security and Hospitality Head&nbsp;
+Ritul Tripathi - Design Head&nbsp;
+Saransh Agarwal - Sponsorship Head&nbsp;
+Soumyadeep Basu - Multimedia Head&nbsp;

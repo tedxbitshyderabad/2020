@@ -1,0 +1,39 @@
+{
+    "archive" : [
+        {
+            "name" : "Chunky Vaziran", 
+            "talk" : "The Design of Consciousness", 
+            "link" : "https://www.youtube.com/embed/_oL4C0QaMgo"
+        },
+        {
+            "name" : "Vivek Sunder", 
+            "talk" : "Hype in the Hyperlocal", 
+            "link" : "https://www.youtube.com/embed/LFXIMqDN-xA"
+        },
+        {
+            "name" : "Shikha Tandon", 
+            "talk" : "Is Passion a choice?", 
+            "link" : "https://www.youtube.com/embed/Dgk2EAM9JDE"
+        },
+        {
+            "name" : "Shramona Poddar", 
+            "talk" : "How to travel like a dreamer", 
+            "link" : "https://www.youtube.com/embed/YMuaH1Mvj80"
+        },
+        {
+            "name" : "Shashaa Tirupati", 
+            "talk" : "Achieving with the mind of a child", 
+            "link" : "https://www.youtube.com/embed/TsMqfjlQBsg"
+        },
+        {
+            "name" : "Yogendra Singh Yadav", 
+            "talk" : "How we Conquered the Tiger Hill", 
+            "link" : "https://www.youtube.com/embed/eAmUpJeOGXo"
+        },
+        {
+            "name" : "Ramana Polavarapu", 
+            "talk" : "6 fold ways of learning new skills", 
+            "link" : "https://www.youtube.com/embed/_XPh3sbEAKE"
+        }
+    ]
+}
