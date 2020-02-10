@@ -354,12 +354,16 @@ figure:hover div {
     transform: rotate(-45deg) translate(-45%, 50%);
 }
 
-#speakers .left-arrow,
+
+/* #speakers .left-arrow, */
+
 #sponsors .left-arrow {
     display: none;
 }
 
-#speakers .right-arrow,
+
+/* #speakers .right-arrow, */
+
 #sponsors .right-arrow {
     display: none;
 }
@@ -377,7 +381,9 @@ figure:hover div {
     justify-content: flex-start;
 }
 
-#speakers .cards,
+
+/* #speakers .cards, */
+
 #sponsors .cards {
     margin: 0 auto;
     width: 90%;
@@ -1517,7 +1523,7 @@ overflow-y: hidden; */
     }
     .card {
         width: 70%;
-        height: 30vh;
+        height: 33vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
@@ -1532,7 +1538,7 @@ overflow-y: hidden; */
     }
     .first-card {
         width: 70%;
-        height: 30vh;
+        height: 33vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
@@ -1547,7 +1553,7 @@ overflow-y: hidden; */
     }
     .last-card {
         width: 70%;
-        height: 30vh;
+        height: 33vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
@@ -2525,7 +2531,7 @@ overflow-y: hidden; */
     }
     .card {
         width: 90%;
-        height: 25vh;
+        height: 28vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
@@ -2540,7 +2546,7 @@ overflow-y: hidden; */
     }
     .first-card {
         width: 90%;
-        height: 25vh;
+        height: 28vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
@@ -2555,7 +2561,7 @@ overflow-y: hidden; */
     }
     .last-card {
         width: 90%;
-        height: 25vh;
+        height: 28vh;
         margin: 2vh auto;
         position: relative;
         display: inline-block;
